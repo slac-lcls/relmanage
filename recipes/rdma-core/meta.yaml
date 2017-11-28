@@ -1,0 +1,15 @@
+{% set version = "15" %}
+
+package:
+  name: rdma-core
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/linux-rdma/rdma-core.git
+  git_rev: v15
+
+build:
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+requirements:
+  build:
+    - {{ compiler('cxx') }}

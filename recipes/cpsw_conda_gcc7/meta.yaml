@@ -1,0 +1,21 @@
+{% set version = "3.5.4" %}
+
+package:
+  name: cpsw
+  version: {{ version }}
+
+source:
+  git_url: file:///afs/slac/g/cd/swe/git/repos/package/cpsw/Framework
+  git_rev: R3.5.4
+  patches: cpsw_3.5.4.patch
+
+build:
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - boost
+    - yaml-cpp
+  run:
+    - boost
+    - yaml-cpp
