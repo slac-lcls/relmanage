@@ -1,26 +1,10 @@
-export LG_RT_DIR=$PWD/runtime
+PYTHON_BIN="$(which python)"
+PYTHON_VER=$("$PYTHON_BIN" -c 'import sys; print("%s.%s" % (sys.version_info.major, sys.version_info.minor))')
+PYTHON_INC="$(dirname "$(dirname $PYTHON_BIN)")"/include
+PYTHON_LIB="$(dirname "$(dirname $PYTHON_BIN)")"/lib/libpython"$PYTHON_VER"m.so
 
-git clone https://github.com/StanfordLegion/psana-legion.git
-cd psana-legion/psana_legion
-make -j 12
-
-mkdir -p $PREFIX/include
-mkdir -p $PREFIX/include/legion
-mkdir -p $PREFIX/include/realm
-mkdir -p $PREFIX/include/mappers
-cp -v $LG_RT_DIR/*.h           $PREFIX/include
-cp -v $LG_RT_DIR/legion/*.h    $PREFIX/include/legion
-cp -v $LG_RT_DIR/legion/*.inl  $PREFIX/include/legion
-cp -v $LG_RT_DIR/realm/*.h     $PREFIX/include/realm
-cp -v $LG_RT_DIR/realm/*.inl   $PREFIX/include/realm
-cp -v $LG_RT_DIR/mappers/*.h   $PREFIX/include/mappers
-cp -v $LG_RT_DIR/mappers/*.inl $PREFIX/include/mappers
-
-mkdir -p $SP_DIR
-cp -v $LG_RT_DIR/../bindings/python/legion.py $SP_DIR
-
-mkdir -p $PREFIX/lib
-cp -v $PWD/*.so $PREFIX/lib
-
-mkdir -p $PREFIX/bin
-cp -v $PWD/psana_legion $PREFIX/bin
+mkdir build
+cd build
+cmake -DBUILD_SHARED_LIBS=ON -DLegion_BUILD_BINDINGS=ON -DLegion_USE_Python=ON -DPYTHON_EXECUTABLE="$PYTHON_BIN" -DPYTHON_LIBRARY="$PYTHON_LIB" -DPYTHON_INCLUDE_DIR="$PYTHON_INC" -DPYTHONLIBS_VERSION_STRING="$PYTHON_VER" -DCMAKE_INSTALL_PREFIX="$PREFIX" ..
+make -j12
+make install
