@@ -4,15 +4,15 @@ channels:
   - lightsource2-tag
   - paulscherrerinstitute
   - file:///reg/g/psdm/sw/conda2/channels/external
+  - file:///reg/g/pcds/pyps/conda/channel
 dependencies:
   - cmake
-  # have to install these specific versions to fix undefined symbol
-  # see https://jira.slac.stanford.edu/browse/L2SDRP-47
-  - hdf5=1.8.17=2
-  - h5py=2.7.0=np111py35_0
+  - h5py
   - ipython
   - numpy
   - pyqt
   - cpsw
   - epics-base
   - pcaspy
+  - pyca
+  - legion
