@@ -7,6 +7,7 @@ cmake \
   -DLegion_USE_Python=ON \
   -DPYTHON_EXECUTABLE="$PYTHON" \
   -DCMAKE_INSTALL_PREFIX="$PREFIX" \
+  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY="$PREFIX/lib" \
   ..
 make -j12
 make install
