@@ -4,4 +4,4 @@ lcls2conda="/reg/g/psdm/sw/conda2/inst"
 export PATH=$lcls2conda/bin:/opt/rh/devtoolset-7/root/usr/bin:$PATH
 unset LD_LIBRARY_PATH
 unset PYTHONPATH
-source activate ps-0.0.3
+source activate ps-0.0.4

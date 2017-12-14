@@ -16,3 +16,4 @@ dependencies:
   - pcaspy
   - pyca
   - legion
+  - cython
