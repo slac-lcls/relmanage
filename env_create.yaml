@@ -18,3 +18,5 @@ dependencies:
   - legion
   - cython
   - libfabric
+  - pyqtgraph
+  - pyzmq
