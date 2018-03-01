@@ -21,3 +21,7 @@ dependencies:
   - pyqtgraph
   - pyzmq
   - matplotlib
+  - mongodb
+  - pymongo
+  - nose
+  - mpi4py
