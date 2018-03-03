@@ -1,0 +1,8 @@
+{% set version = "7.0.1" %}
+
+package:
+  name: epics-base
+  version: {{ version }}
+
+source:
+  url: https://epics.anl.gov/download/base/base-7.0.1.1.tar.gz

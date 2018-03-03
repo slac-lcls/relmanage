@@ -1,0 +1,23 @@
+{% set version = "1.0.0" %}
+
+package:
+  name: p4p
+  version: {{ version }}
+
+source:
+  url: https://github.com/mdavidsaver/p4p/releases/download/1.0/p4p-1.0.tar.gz
+
+requirements:
+  build:
+    - python
+    - epics-base >=7
+    - numpy
+  run:
+    - python
+    - epics-base
+    - numpy
+  test:
+    requires:
+      - nose
+    commands:
+      - make nose
