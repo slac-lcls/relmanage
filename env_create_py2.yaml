@@ -6,24 +6,16 @@ channels:
   - file:///reg/g/psdm/sw/conda2/channels/external
   - file:///reg/g/pcds/pyps/conda/channel
 dependencies:
+  - python=2.7
   - cmake
   - h5py
   - ipython
   - numpy
-  - pyqt
-  - cpsw
-  - epics-base
-  - pcaspy
-  - pyca
   - legion
   - cython
-  - libfabric
-  - pyqtgraph
-  - pyzmq
   - matplotlib
-  - mongodb
-  - pymongo
-  - nose
   - mpi4py
-  - ipdb
-  - requests
+  - cpsw
+  - epics-base
+  - libfabric
+  - nose

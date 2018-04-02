@@ -1,0 +1,15 @@
+package:
+  name: psmon
+  version: 1.0.0
+
+source:
+  git_url: https://github.com/slaclab/psmon.git
+
+requirements:
+  run:
+    - python
+    - pyqtgraph
+    - pyzmq
+    - numpy
+    - matplotlib
+    - ipython
