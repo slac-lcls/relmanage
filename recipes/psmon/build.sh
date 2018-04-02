@@ -4,4 +4,4 @@
 # We really want them to only be run dependencies. 
 # the flags tell setup.py to ignore the install_requires, since
 # conda will manage those with the (superior) meta.yaml dependencies.
-python setup.py install --single-version-externally-managed --record=/tmp/record.txt
+python setup.py install --single-version-externally-managed --record=record.txt
