@@ -1,11 +1,11 @@
-{% set version = "1.5.2" %}
+{% set version = "1.6.1" %}
 
 package:
   name: libfabric
   version: {{ version }}
 
 source:
-  url: https://github.com/ofiwg/libfabric/releases/download/v1.5.2/libfabric-1.5.2.tar.bz2
+  url: https://github.com/ofiwg/libfabric/releases/download/v1.6.1/libfabric-1.6.1.tar.bz2
   #git_url: https://github.com/ofiwg/libfabric.git
   #git_rev: v1.5.2
 
