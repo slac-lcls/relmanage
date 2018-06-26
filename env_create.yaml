@@ -29,3 +29,7 @@ dependencies:
   - requests
   - psmon
   - rapidjson
+  - redis
+  - pytest
+  - flake8
+  - pylint

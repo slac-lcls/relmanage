@@ -6,3 +6,4 @@ unset LD_LIBRARY_PATH
 unset PYTHONPATH
 source /reg/g/psdm/sw/conda2/inst/etc/profile.d/conda.sh
 conda activate ps-0.1.1
+export MANPATH=$CONDA_PREFIX/share/man
