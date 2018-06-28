@@ -30,6 +30,7 @@ dependencies:
   - psmon
   - rapidjson
   - redis
+  - redis-py
   - pytest
   - flake8
   - pylint
