@@ -5,6 +5,7 @@ channels:
   - paulscherrerinstitute
   - file:///reg/g/psdm/sw/conda2/channels/external
   - file:///reg/g/pcds/pyps/conda/channel
+  - pydm-tag
 dependencies:
   - cmake
   - h5py
@@ -34,3 +35,5 @@ dependencies:
   - pytest
   - flake8
   - pylint
+  - pydm
+  - versioneer
