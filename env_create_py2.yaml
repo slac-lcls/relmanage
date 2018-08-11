@@ -1,23 +1,15 @@
 channels:
-  - defaults
-  - conda-forge
-  - lightsource2-tag
-  - paulscherrerinstitute
-  - file:///reg/g/psdm/sw/conda2/channels/external
-  - file:///reg/g/pcds/pyps/conda/channel
+ - defaults
+ - conda-forge
 dependencies:
-  - python=2.7
-  - cmake
-  - h5py
-  - ipython
-  - numpy
-  - legion
-  - cython
-  - matplotlib
-  - mpi4py
-  - cpsw
-  - epics-base
-  - libfabric
-  - nose
-  - pyzmq
-  - versioneer
+ - python=2.7
+ - cmake
+ - h5py
+ - ipython
+ - numpy
+ - cython
+ - matplotlib
+ - mpi4py
+ - nose
+ - pytest
+ - versioneer
