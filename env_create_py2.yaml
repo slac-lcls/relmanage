@@ -13,3 +13,7 @@ dependencies:
  - nose
  - pytest
  - versioneer
+ - mongodb
+ - pymongo
+ - requests
+
