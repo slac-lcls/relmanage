@@ -16,4 +16,4 @@ dependencies:
  - mongodb
  - pymongo
  - requests
-
+ - rapidjson
