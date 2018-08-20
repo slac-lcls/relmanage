@@ -13,6 +13,7 @@ cmake \
   -DPYTHON_EXECUTABLE="$PYTHON" \
   -DLegion_USE_GASNet=ON \
   -DGASNet_ROOT_DIR="$PWD/../gasnet/release" \
+  -DGASNet_CONDUIT=mpi \
   -DCMAKE_INSTALL_PREFIX="$PREFIX" \
   -DCMAKE_INSTALL_LIBDIR="$PREFIX/lib" \
   ..
