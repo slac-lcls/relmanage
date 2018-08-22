@@ -17,3 +17,4 @@ dependencies:
  - pymongo
  - requests
  - rapidjson
+ - qualname
