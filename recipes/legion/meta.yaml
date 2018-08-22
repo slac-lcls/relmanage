@@ -1,4 +1,4 @@
-{% set version = "0.5.4" %}
+{% set version = "0.5.5" %}
 
 package:
   name: legion
@@ -13,8 +13,8 @@ build:
 requirements:
   build:
     - cmake
-    - python 3.6
+    - python {{ environ.get('PY_VER') }}
   run:
     - cffi
     - numpy
-    - python 3.6
+    - python {{ environ.get('PY_VER') }}
