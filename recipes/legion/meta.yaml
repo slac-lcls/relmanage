@@ -1,7 +1,7 @@
 {% set version = "0.5.5" %}
 
 package:
-  name: legion-py{{ environ.get('PY_VER') }}
+  name: legion
   version: {{ version }}
 
 source:
