@@ -16,7 +16,6 @@ cmake \
   -DGASNet_CONDUIT=mpi \
   -DCMAKE_INSTALL_PREFIX="$PREFIX" \
   -DCMAKE_INSTALL_LIBDIR="$PREFIX/lib" \
-  -DINSTALL_SUFFIX="$PY_VER" \
   ..
 make -j12
 make install
