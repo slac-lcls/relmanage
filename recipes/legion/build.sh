@@ -11,7 +11,6 @@ cmake \
   -DLegion_ENABLE_TLS=ON \
   -DLegion_USE_Python=ON \
   -DPYTHON_EXECUTABLE="$PYTHON" \
-  -DBINDINGS_DEFAULT_MODULE=psana \
   -DLegion_USE_GASNet=ON \
   -DGASNet_ROOT_DIR="$PWD/../gasnet/release" \
   -DGASNet_CONDUIT=mpi \
