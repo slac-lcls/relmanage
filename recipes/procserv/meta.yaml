@@ -1,0 +1,13 @@
+{% set version = "2.7.0" %}
+
+package:
+  name: procserv
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/ralphlange/procServ.git
+  git_rev: V2.7.0
+
+build:
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+requirements:
