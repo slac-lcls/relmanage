@@ -37,3 +37,4 @@ dependencies:
   - pylint
   - pydm
   - versioneer
+  - procserv

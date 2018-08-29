@@ -1,4 +1,4 @@
 make
-./configure --disable-doc --prefix=$PREFIX
+./configure --disable-doc --enable-access-from-anywhere --prefix=$PREFIX
 make
 make install
