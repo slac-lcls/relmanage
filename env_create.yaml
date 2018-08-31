@@ -3,8 +3,8 @@ channels:
   - conda-forge
   - lightsource2-tag
   - paulscherrerinstitute
-  - file:///reg/g/psdm/sw/conda2/channels/external
-  - file:///reg/g/pcds/pyps/conda/channel
+  - lcls-ii
+  - pcds-tag
   - pydm-tag
 dependencies:
   - cmake
