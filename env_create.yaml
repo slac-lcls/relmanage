@@ -38,3 +38,4 @@ dependencies:
   - pydm
   - versioneer
   - procserv
+  - curl

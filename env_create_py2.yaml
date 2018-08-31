@@ -18,3 +18,4 @@ dependencies:
  - requests
  - rapidjson
  - qualname
+ - curl
