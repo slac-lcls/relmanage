@@ -7,7 +7,7 @@ ENV CONDA_ENV=myrel
 ENV PATH=$CONDA_PREFIX/bin:$PATH
 
 RUN yum -y install centos-release-scl && \
-    yum -y install devtoolset-7 git wget && \
+    yum -y install devtoolset-7 git wget libibverbs-devel librdmacm-devel && \
     yum clean all && \
     echo "source scl_source enable devtoolset-7" >> /etc/profile.d/enable-devtoolset-7.sh
 
