@@ -15,7 +15,9 @@ RUN apt-get update -qq && \
     apt-get install -qq build-essential git g++-7 wget && \
     apt-get clean
 
-ADD env_create.yaml .
+ARG CONDA_ENV_FILE=env_create.yaml
+
+ADD $CONDA_ENV_FILE .
 ADD docker/make_conda_env.sh .
 
 RUN ./make_conda_env.sh
