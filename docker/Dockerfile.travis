@@ -1,0 +1,21 @@
+FROM ubuntu:16.04
+
+MAINTAINER Elliott Slaughter <slaughter@cs.stanford.edu>
+
+ENV DEBIAN_FRONTEND noninteractive
+
+ENV CONDA_PREFIX=/conda
+ENV CONDA_ENV=myrel
+ENV PATH=$CONDA_PREFIX/bin:$PATH
+
+RUN apt-get update -qq && \
+    apt-get install -qq software-properties-common && \
+    add-apt-repository ppa:ubuntu-toolchain-r/test -y && \
+    apt-get update -qq && \
+    apt-get install -qq build-essential git g++-7 wget && \
+    apt-get clean
+
+ADD env_create.yaml .
+ADD docker/make_conda_env.sh .
+
+RUN ./make_conda_env.sh
