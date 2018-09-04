@@ -11,9 +11,9 @@ RUN yum -y install centos-release-scl && \
     yum clean all && \
     echo "source scl_source enable devtoolset-7" >> /etc/profile.d/enable-devtoolset-7.sh
 
-# ARG CONDA_ENV_FILE=env_create.yaml
+ARG CONDA_ENV_FILE=env_create.yaml
 
-# ADD $CONDA_ENV_FILE .
-# ADD docker/make_conda_env.sh .
+ADD $CONDA_ENV_FILE .
+ADD docker/make_conda_env.sh .
 
-# RUN ./make_conda_env.sh
+RUN ./make_conda_env.sh
