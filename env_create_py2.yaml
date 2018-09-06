@@ -18,5 +18,6 @@ dependencies:
  - pymongo
  - requests
  - rapidjson
+ - legion
  - qualname
  - curl
