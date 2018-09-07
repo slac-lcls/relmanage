@@ -7,6 +7,7 @@ channels:
   - pcds-tag
   - pydm-tag
 dependencies:
+  - python=PYTHONVER
   - cmake
   - h5py
   - ipython

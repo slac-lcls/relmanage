@@ -5,11 +5,8 @@ function build_image {
     os_version=$2
     py_version=$3
 
-    if [[ $py_version == 2.7 ]]; then
-        env_file=env_create_py2.yaml
-    elif [[ $py_version == 3.* ]]; then
-        env_file=env_create.yaml
-    fi
+    env_file=temp.yaml
+    sed s/PYTHONVER/$py_version/ env_create.yaml > $env_file
 
     tag=slaclcls/travis:$os_name$os_version-py$py_version
     docker build --build-arg CONDA_ENV_FILE=$env_file -t $tag -f docker/Dockerfile.$os_name . && docker push $tag
