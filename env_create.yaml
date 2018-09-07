@@ -18,6 +18,7 @@ dependencies:
   - pcaspy
   - pyca
   - legion
+  - qualname # Note: only needed for Python 2
   - cython
   - libfabric
   - pyqtgraph
