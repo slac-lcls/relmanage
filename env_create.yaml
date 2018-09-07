@@ -41,3 +41,4 @@ dependencies:
   - versioneer
   - procserv
   - curl
+  - qualname
