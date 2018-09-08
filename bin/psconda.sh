@@ -9,5 +9,7 @@ export PATH=/opt/rh/devtoolset-$rhel_version/root/usr/bin:$PATH
 unset LD_LIBRARY_PATH
 unset PYTHONPATH
 source /reg/g/psdm/sw/conda2/inst/etc/profile.d/conda.sh
-conda activate ps-0.1.1
+
+# user can pick up python2 by adding "-py2" option to setup_env.sh
+conda activate ps-0.1.2$@
 export MANPATH=$CONDA_PREFIX/share/man

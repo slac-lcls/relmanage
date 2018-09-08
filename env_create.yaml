@@ -9,36 +9,33 @@ channels:
 dependencies:
   - python=PYTHONVER
   - cmake
-  - h5py
-  - ipython
   - numpy
+  - mpi4py   # psana packages (legion/qualname are optional)
+  - legion
+  - qualname
+  - cython
+  - matplotlib
+  - pytest
+  - versioneer
+  - mongodb
+  - pymongo
+  - curl
+  - redis    # ami packages
+  - redis-py
+  - pyzmq
   - pyqt
-  - cpsw
+  - pyqtgraph
+  - pydm
+  - flake8
+  - cpsw     # daq packages
+  - procserv
   - epics-base
   - pcaspy
   - pyca
-  - legion
-  - qualname # Note: only needed for Python 2
-  - cython
   - libfabric
-  - pyqtgraph
-  - pyzmq
-  - matplotlib
-  - mongodb
-  - pymongo
-  - nose
-  - mpi4py
-  - ipdb
-  - requests
-  - psmon
   - rapidjson
-  - redis
-  - redis-py
-  - pytest
-  - flake8
-  - pylint
-  - pydm
-  - versioneer
-  - procserv
-  - curl
-  - qualname
+  - psmon    # not required by anybody, but useful
+  - h5py
+  - ipython
+  - requests
+  - ipdb
