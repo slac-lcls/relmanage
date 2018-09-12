@@ -34,9 +34,9 @@ dependencies:
   - pyca
   - libfabric
   - rapidjson
+  - transitions
   - psmon    # not required by anybody, but useful
   - h5py
   - ipython
   - requests
   - ipdb
-  - transitions
