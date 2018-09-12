@@ -6,6 +6,8 @@ source:
   git_url: https://github.com/slaclab/psmon.git
 
 requirements:
+  build:
+    - python
   run:
     - python
     - pyqtgraph
