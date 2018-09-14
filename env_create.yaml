@@ -28,7 +28,6 @@ dependencies:
   - pydm
   - flake8
   - cpsw     # daq packages
-  - procserv
   - epics-base
   - pcaspy
   - pyca
