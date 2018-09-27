@@ -30,5 +30,5 @@ cmake \
   -DCMAKE_INSTALL_LIBDIR="$PREFIX/lib" \
   "${CMAKE_FLAGS[@]}" \
   ..
-make -j12
+make -j$CPU_COUNT
 make install
