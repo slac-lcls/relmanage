@@ -1,6 +1,6 @@
 CMAKE_FLAGS=()
 if [[ $USE_CUDA -eq 1 ]]; then
-    CMAKE_FLAG+=(
+    CMAKE_FLAGS+=(
 	-DLegion_USE_CUDA=ON
     )
 fi
