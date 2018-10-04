@@ -6,15 +6,14 @@ if [[ $USE_CUDA -eq 1 ]]; then
 fi
 
 if [[ $USE_GASNET -eq 1 ]]; then
+    export CONDUIT=${CONDUIT:-mpi}
     git clone https://github.com/StanfordLegion/gasnet.git
-    pushd gasnet
-    make CONDUIT=mpi
-    popd
+    make -C gasnet CONDUIT=$CONDUIT
 
     CMAKE_FLAGS+=(
 	-DLegion_USE_GASNet=ON
 	-DGASNet_ROOT_DIR="$PWD/../gasnet/release"
-	-DGASNet_CONDUIT=mpi
+	-DGASNet_CONDUITS=$CONDUIT
     )
 fi
 

@@ -1,4 +1,4 @@
-{% set version = "0.5.13" %}
+{% set version = "0.5.14" %}
 
 package:
   name: legion
@@ -13,6 +13,7 @@ build:
   script_env:
     - USE_CUDA
     - USE_GASNET
+    - CONDUIT
 requirements:
   build:
     - cmake
