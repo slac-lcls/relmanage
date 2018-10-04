@@ -12,7 +12,7 @@ if [[ $USE_GASNET -eq 1 ]]; then
 
     CMAKE_FLAGS+=(
 	-DLegion_USE_GASNet=ON
-	-DGASNet_ROOT_DIR="$PWD/../gasnet/release"
+	-DGASNet_ROOT_DIR="$PWD/gasnet/release"
 	-DGASNet_CONDUITS=$CONDUIT
     )
 fi
