@@ -5,4 +5,15 @@ package:
   version: {{ version }}
 
 source:
-  url: https://epics.anl.gov/download/base/base-7.0.1.1.tar.gz
+  git_url: https://github.com/epics-base/epics-base.git
+  git_rev: 7.0
+  patches:
+    - config_readline.diff
+
+build:
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
