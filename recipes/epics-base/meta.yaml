@@ -9,11 +9,13 @@ source:
   git_rev: 7.0
   patches:
     - config_readline.diff
+    - config_common.diff
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 
 requirements:
   build:
+    - perl
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}

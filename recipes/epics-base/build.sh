@@ -1,3 +1,5 @@
+#!/bin/bash
+
 EPICS_BASE=$PREFIX/epics
 
 EPICS_HOST_ARCH=$(startup/EpicsHostArch)
@@ -7,12 +9,23 @@ GNU_DIR=$(dirname $(dirname $(which x86_64-conda_cos6-linux-gnu-gcc)))
 if [ "$GNU_DIR" != "/usr" ]; then
     echo "GNU_DIR="$GNU_DIR >> configure/CONFIG_COMMON
     echo "CMPLR_PREFIX=x86_64-conda_cos6-linux-gnu-" >> configure/CONFIG_COMMON
-    sed -i  "s|USR_CXXFLAGS =|USR_CXXFLAGS = -std=c++11|" configure/CONFIG_COMMON
-    # sed -i  "s|USR_INCLUDES =|USR_INCLUDES = -I$CONDA_PREFIX/include|" configure/CONFIG_COMMON
-    # sed -i  "s|USR_LDFLAGS =|USR_LDFLAGS = -L$CONDA_PREFIX/lib -Wl,-rpath,$CONDA_PREFIX/lib|" configure/CONFIG_COMMON
 fi
 
 make -j $CPU_COUNT INSTALL_LOCATION=$EPICS_BASE
+
+# Symlink libraries into $PREFIX/lib
+cd $PREFIX/lib
+find ../epics/lib/$EPICS_HOST_ARCH/ -name \*.so\* -exec ln -vs "{}" . ';' || : # linux
+find ../epics/lib/$EPICS_HOST_ARCH/ -name \*.dylib\* -exec ln -vs "{}" . ';' || : # osx
+cd -
+
+# Setup symlinks for utilities
+BINS="caget caput camonitor softIoc caRepeater cainfo"
+cd $PREFIX/bin
+for file in $BINS ; do
+    ln -vs ../epics/bin/$EPICS_HOST_ARCH/$file .
+done
+cd -
 
 mkdir -p $PREFIX/etc/conda/activate.d
 mkdir -p $PREFIX/etc/conda/deactivate.d
