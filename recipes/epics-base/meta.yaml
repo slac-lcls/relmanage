@@ -1,4 +1,4 @@
-{% set version = "7.0.1" %}
+{% set version = "7.0.2" %}
 
 package:
   name: epics-base
@@ -17,5 +17,3 @@ build:
 requirements:
   build:
     - perl
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}

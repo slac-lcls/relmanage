@@ -5,10 +5,10 @@ EPICS_BASE=$PREFIX/epics
 EPICS_HOST_ARCH=$(startup/EpicsHostArch)
 export EPICS_HOST_ARCH
 
-GNU_DIR=$(dirname $(dirname $(which x86_64-conda_cos6-linux-gnu-gcc)))
+GNU_DIR=$(dirname $(dirname $(which gcc)))
 if [ "$GNU_DIR" != "/usr" ]; then
     echo "GNU_DIR="$GNU_DIR >> configure/CONFIG_COMMON
-    echo "CMPLR_PREFIX=x86_64-conda_cos6-linux-gnu-" >> configure/CONFIG_COMMON
+    # echo "CMPLR_PREFIX=x86_64-conda_cos6-linux-gnu-" >> configure/CONFIG_COMMON
 fi
 
 make -j $CPU_COUNT INSTALL_LOCATION=$EPICS_BASE
@@ -20,7 +20,7 @@ find ../epics/lib/$EPICS_HOST_ARCH/ -name \*.dylib\* -exec ln -vs "{}" . ';' || 
 cd -
 
 # Setup symlinks for utilities
-BINS="caget caput camonitor softIoc caRepeater cainfo p2p pvget pvinfo pvlist pvput eget softIocPVA"
+BINS="caget caput camonitor softIoc caRepeater cainfo p2p pvget pvinfo pvlist pvput softIocPVA"
 cd $PREFIX/bin
 for file in $BINS ; do
     ln -vs ../epics/bin/$EPICS_HOST_ARCH/$file .

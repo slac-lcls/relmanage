@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: p4p
@@ -16,8 +16,6 @@ requirements:
     - python
     - epics-base >=7
     - numpy
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
   run:
     - python
     - epics-base
