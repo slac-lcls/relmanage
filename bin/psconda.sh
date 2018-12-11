@@ -12,4 +12,5 @@ source /reg/g/psdm/sw/conda2/inst/etc/profile.d/conda.sh
 
 # user can pick up python2 by adding "-py2" option to setup_env.sh
 conda activate ps-0.1.2$@
-export MANPATH=$CONDA_PREFIX/share/man
+
+export MANPATH=$CONDA_PREFIX/share/man${MANPATH:+:${MANPATH}}
