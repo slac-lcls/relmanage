@@ -12,5 +12,6 @@ requirements:
     - dill
     - pyzmq
     - pyqtgraph
-    - graphkit
+    - networkfox
     - psana
+    - ipython

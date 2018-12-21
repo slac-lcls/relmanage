@@ -1,9 +1,9 @@
 package:
-  name: graphkit
+  name: networkfox
   version: 0.0.1
 
 source:
-  git_url: https://github.com/syamajala/graphkit.git
+  git_url: https://github.com/slac-lcls/networkfox.git
 
 requirements:
   build:
