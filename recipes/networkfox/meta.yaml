@@ -1,6 +1,6 @@
 package:
   name: networkfox
-  version: 0.0.1
+  version: 0.0.2
 
 source:
   git_url: https://github.com/slac-lcls/networkfox.git

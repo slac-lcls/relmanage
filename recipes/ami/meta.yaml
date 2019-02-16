@@ -9,6 +9,7 @@ requirements:
   build:
     - python
   run:
+    - pytest-asyncio
     - dill
     - pyzmq
     - pyqtgraph
