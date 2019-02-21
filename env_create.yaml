@@ -1,13 +1,10 @@
 channels:
   - defaults
   - conda-forge
-  - lightsource2-tag
-  - paulscherrerinstitute
   - lcls-ii
-  - pcds-tag
   - pydm-tag
 dependencies:
-  - python=PYTHONVER
+  - python=3.6 #PYTHONVER
   - cmake
   - numpy
   - mpi4py   # psana packages (legion/qualname are optional)
@@ -20,22 +17,16 @@ dependencies:
   - mongodb
   - pymongo
   - curl
-  - redis    # ami packages
-  - redis-py
   - pyzmq
   - pyqt
   - pyqtgraph
   - pydm
   - flake8
   - cpsw     # daq packages
-  - epics-base
-  - pcaspy
-  - pyca
+  - p4p
   - libfabric
   - rapidjson
   - transitions
-  - psmon    # not required by anybody, but useful
-  - h5py
   - ipython
   - requests
   - ipdb
