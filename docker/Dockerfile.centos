@@ -9,7 +9,7 @@ ENV PATH=$CONDA_PREFIX/bin:$PATH
 
 # Note: rh-git29 comes from scl and is needed on CentOS 6 because the default git is too old for versioneer.
 RUN yum -y install centos-release-scl && \
-    yum -y install devtoolset-7 libibverbs-devel librdmacm-devel mesa-libGL rh-git218 wget && \
+    yum -y install devtoolset-7 libibverbs-devel librdmacm-devel mesa-libGL rh-git218 wget bzip2 && \
     yum clean all && \
     echo "source scl_source enable devtoolset-7" >> /etc/profile.d/enable-devtoolset-7.sh && \
     echo "source scl_source enable rh-git218" >> /etc/profile.d/enable-rh-git218.sh
