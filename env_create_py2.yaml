@@ -1,0 +1,29 @@
+channels:
+  - defaults
+  - conda-forge
+  - lcls-ii
+  - pydm-tag
+dependencies:
+  - python=PYTHONVER
+  - cmake
+  - numpy
+  - mpi4py   # psana packages (legion/qualname are optional)
+  - legion
+  - qualname
+  - cython
+  - matplotlib
+  - pytest
+  - versioneer
+  - mongodb
+  - pymongo
+  - curl
+  - pyzmq
+  - pyqt
+  - pyqtgraph
+  - pydm
+  - flake8
+  - rapidjson
+  - transitions
+  - ipython
+  - requests
+  - ipdb
