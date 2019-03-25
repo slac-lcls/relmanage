@@ -1,8 +1,8 @@
 diff --git a/configure/CONFIG_COMMON b/configure/CONFIG_COMMON
-index 67cf33e..2fca945 100644
+index d3a6696..d28bc8d 100644
 --- a/configure/CONFIG_COMMON
 +++ b/configure/CONFIG_COMMON
-@@ -202,7 +202,7 @@ OP_SYS_INCLUDES =
+@@ -206,7 +206,7 @@ OP_SYS_INCLUDES =
  # Makefile specific flags
  USR_INCLUDES =
  USR_CFLAGS =
@@ -11,7 +11,7 @@ index 67cf33e..2fca945 100644
  USR_LDFLAGS =
  USR_LIBS =
  USR_CPPFLAGS =
-@@ -395,10 +395,10 @@ INSTALL_LIB_INSTALLS = $(addprefix $(INSTALL_LIB)/,$(notdir $(LIB_INSTALLS)))
+@@ -399,10 +399,10 @@ INSTALL_LIB_INSTALLS = $(addprefix $(INSTALL_LIB)/,$(notdir $(LIB_INSTALLS)))
  
  #---------------------------------------------------------------
  # Installed file permissions
@@ -19,10 +19,10 @@ index 67cf33e..2fca945 100644
 -LIB_PERMISSIONS = 444
 -SHRLIB_PERMISSIONS = 555
 -INSTALL_PERMISSIONS = 444
-+BIN_PERMISSIONS = 775
-+LIB_PERMISSIONS = 664
-+SHRLIB_PERMISSIONS = 775
-+INSTALL_PERMISSIONS = 664
++BIN_PERMISSIONS = 755
++LIB_PERMISSIONS = 644
++SHRLIB_PERMISSIONS = 755
++INSTALL_PERMISSIONS = 644
  
  #---------------------------------------------------------------
  #
