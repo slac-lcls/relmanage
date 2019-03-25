@@ -20,7 +20,7 @@ find ../epics/lib/$EPICS_HOST_ARCH/ -name \*.dylib\* -exec ln -vs "{}" . ';' || 
 cd -
 
 # Setup symlinks for utilities
-BINS="caget caput camonitor softIoc caRepeater cainfo p2p pvget pvinfo pvlist pvput softIocPVA"
+BINS="caget caput camonitor softIoc caRepeater cainfo p2p pvget pvinfo pvlist pvput pvcall softIocPVA"
 cd $PREFIX/bin
 for file in $BINS ; do
     ln -vs ../epics/bin/$EPICS_HOST_ARCH/$file .
