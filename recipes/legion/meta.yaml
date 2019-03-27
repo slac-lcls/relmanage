@@ -1,4 +1,4 @@
-{% set version = "0.5.17" %}
+{% set version = "0.5.18" %}
 
 package:
   name: legion
