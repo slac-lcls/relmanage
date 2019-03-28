@@ -22,3 +22,12 @@ jobs:
         - ./docker/build_all.sh
     - <<: *docker-build
       env: PYVER=3.6
+
+notifications:
+  email:
+    recipients:
+      - eslaught@slac.stanford.edu
+      - cpo@slac.stanford.edu
+      - weninc@slac.stanford.edu
+    on_success: never # default: change
+    on_failure: always # default: always
