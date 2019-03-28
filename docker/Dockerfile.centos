@@ -15,8 +15,16 @@ RUN yum -y install centos-release-scl && \
     echo "source scl_source enable rh-git218" >> /etc/profile.d/enable-rh-git218.sh
 
 ARG CONDA_ENV_FILE=env_create.yaml
+ARG SETUP_SCRIPT=make_conda_env.sh
 
-ADD $CONDA_ENV_FILE .
-ADD docker/make_conda_env.sh .
+# Note: used for build_conda_package.sh
+ARG PYVER=3.6
+ARG PACKAGE=package_name
 
-RUN ./make_conda_env.sh
+COPY $CONDA_ENV_FILE .
+COPY $SETUP_SCRIPT .
+COPY recipes recipes
+
+RUN source /etc/profile.d/enable-devtoolset-7.sh && \
+    source /etc/profile.d/enable-rh-git218.sh && \
+    PYVER=$PYVER PACKAGE=$PACKAGE ./$(basename $SETUP_SCRIPT)

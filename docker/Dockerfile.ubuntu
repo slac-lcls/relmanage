@@ -16,8 +16,13 @@ RUN apt-get update -qq && \
     apt-get clean
 
 ARG CONDA_ENV_FILE=env_create.yaml
+ARG SETUP_SCRIPT=make_conda_env.sh
+
+# Note: used for build_conda_package.sh
+ARG PYVER=3.6
+ARG PACKAGE=package_name
 
 ADD $CONDA_ENV_FILE .
-ADD docker/make_conda_env.sh .
+ADD $SETUP_SCRIPT .
 
-RUN ./make_conda_env.sh
+RUN PYVER=$PYVER ./$SETUP_SCRIPT
