@@ -1,8 +1,8 @@
 channels:
-  - defaults
-  - conda-forge
   - lcls-ii
   - pydm-tag
+  - defaults
+  - conda-forge
 dependencies:
   - python=PYTHONVER
   - cmake
