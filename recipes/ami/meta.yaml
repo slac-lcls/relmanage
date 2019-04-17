@@ -10,6 +10,7 @@ requirements:
     - python
   run:
     - pytest-asyncio
+    - pytest-qt
     - dill
     - pyzmq
     - pyqtgraph
