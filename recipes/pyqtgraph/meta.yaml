@@ -1,0 +1,43 @@
+{% set version = "0.11.0.dev0" %}
+
+package:
+  name: pyqtgraph
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/pyqtgraph/pyqtgraph.git
+  git_tag: develop
+
+build:
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  script: $PYTHON setup.py install  --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - numpy
+    # pyqtgraph works with pyqt4 or pyqt5. Don't pin it here.
+    - pyqt
+
+test:
+  imports:
+    - pyqtgraph
+
+about:
+  home: http://www.pyqtgraph.org
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.txt
+  summary: Scientific Graphics and GUI Library for Python
+
+  description: |
+    PyQtGraph is a pure-python graphics and GUI library built on PyQt4 / 
+    PySide and numpy. It is intended for use in mathematics / scientific / 
+    engineering applications. Despite being written entirely in python, the
+    library is very fast due to its heavy leverage of numpy for number
+    crunching and Qt's GraphicsView framework for fast display.
+  doc_url: http://www.pyqtgraph.org/documentation/ 
+  dev_url: https://github.com/pyqtgraph/pyqtgraph
