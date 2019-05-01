@@ -1,4 +1,4 @@
-{% set version = "3.0.0" %}
+{% set version = "3.3.0" %}
 
 package:
   name: p4p
@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: https://github.com/mdavidsaver/p4p.git
-  git_tag: master
+  git_tag: 3.3.0
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
