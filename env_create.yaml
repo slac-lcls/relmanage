@@ -1,7 +1,5 @@
 channels:
   - lcls-ii
-  - conda-forge
-  - defaults
   - pydm-tag
   - defaults
   - conda-forge
