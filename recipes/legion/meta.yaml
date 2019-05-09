@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: https://gitlab.com/StanfordLegion/legion.git
-  git_rev: cmake-gasnet-private-dependency-dcr
+  git_rev: control_replication
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
