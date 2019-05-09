@@ -19,6 +19,7 @@ dependencies:
   - mongodb
   - pymongo
   - curl
+  - mypy_extensions
   - pyzmq
   - pyqt
   - pyqtgraph
