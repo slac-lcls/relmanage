@@ -18,3 +18,5 @@ requirements:
     - psana
     - ipython
     - asyncqt
+    - mypy
+    - mypy_extensions

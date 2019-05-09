@@ -26,3 +26,4 @@ requirements:
       - mpi4py
       - mongodb
       - pymongo
+      - mypy_extensions
