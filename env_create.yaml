@@ -32,3 +32,5 @@ dependencies:
   - requests
   - ipdb
   - prometheus-cpp
+  - amityping
+  - mypy
