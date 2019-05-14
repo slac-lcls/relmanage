@@ -1,4 +1,4 @@
-{% set version = "1.0.1a" %}
+{% set version = "1.0.1" %}
 
 package:
   name: amityping
