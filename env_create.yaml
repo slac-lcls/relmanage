@@ -23,6 +23,7 @@ dependencies:
   - pyqtgraph
   - psmon
   - pydm
+  - dill
   - flake8
   - cpsw     # daq packages
   - p4p
