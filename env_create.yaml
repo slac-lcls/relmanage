@@ -21,6 +21,7 @@ dependencies:
   - pyzmq
   - pyqt
   - pyqtgraph
+  - psmon
   - pydm
   - flake8
   - cpsw     # daq packages
