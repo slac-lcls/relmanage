@@ -17,6 +17,7 @@ dependencies:
   - mongodb
   - pymongo
   - curl
+  - bitstruct
   - mypy_extensions
   - pyzmq
   - pyqt
