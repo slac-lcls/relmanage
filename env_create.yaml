@@ -13,7 +13,6 @@ dependencies:
   - cython
   - matplotlib
   - pytest
-  - versioneer
   - mongodb
   - pymongo
   - curl
