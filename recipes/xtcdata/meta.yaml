@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = "1.0.5" %}
 
 package:
   name: xtcdata
@@ -13,3 +13,4 @@ build:
 requirements:
   build:
     - cmake
+    - rapidjson

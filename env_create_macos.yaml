@@ -26,4 +26,6 @@ dependencies:
   - rapidjson
   - ipython
   - requests
+  - clang_osx-64
+  - clangxx_osx-64
   - llvm-openmp
