@@ -27,3 +27,4 @@ dependencies:
   - rapidjson
   - ipython
   - requests
+  - llvm-openmp
