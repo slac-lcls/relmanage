@@ -18,7 +18,6 @@ dependencies:
   - pyzmq
   - pyqt
   - pyqtgraph
-  - psmon
   - pydm
   - dill
   - flake8
