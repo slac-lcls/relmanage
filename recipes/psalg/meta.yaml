@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: psalg
@@ -16,6 +16,10 @@ requirements:
     - xtcdata
     - rapidjson
     - libcurl
+    - llvm-openmp           # [osx]
+    - {{ compiler('c') }}   # [osx]
+    - {{ compiler('cxx') }} # [osx]
   run:
     - xtcdata
     - libcurl
+    - llvm-openmp   # [osx]
