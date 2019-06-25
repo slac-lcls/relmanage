@@ -17,8 +17,9 @@ build:
 requirements:
   build:
     - cmake
-    - python {{ environ.get('PY_VER') }}
+  host:
+    - python
   run:
     - cffi
     - numpy
-    - python {{ environ.get('PY_VER') }}
+    - python
