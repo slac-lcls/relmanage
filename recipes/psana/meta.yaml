@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: psana
@@ -6,25 +6,32 @@ package:
 
 source:
   git_url: https://github.com/slac-lcls/lcls2.git
-  git_rev: v{{ version }}
+  git_rev: master
 
 build:
-    number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 
 requirements:
-    build:
-      - python
-      - numpy
-      - cython
-      - psalg
+  build:
+    - cmake
+    - {{ compiler('c') }}   # [osx]
+    - {{ compiler('cxx') }} # [osx]
 
-    run:
-      - python
-      - numpy
-      - psalg
-      - requests
-      - mpi4py
-      - mongodb
-      - pymongo
-      - amityping
-      - mypy_extensions
+  host:
+    - python
+    - numpy
+    - cython
+    - psalg
+
+  run:
+    - python
+    - numpy
+    - psalg
+    - requests
+    - mpi   # [osx]
+    - mpi4py
+    - mongodb
+    - pymongo
+    - amityping
+    - mypy_extensions
+    - bitstruct

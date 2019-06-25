@@ -6,19 +6,20 @@ package:
 
 source:
   git_url: https://github.com/slac-lcls/lcls2.git
-  git_rev: v{{ version }}
+  git_rev: master
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 requirements:
   build:
     - cmake
-    - xtcdata
-    - rapidjson
-    - libcurl
     - llvm-openmp           # [osx]
     - {{ compiler('c') }}   # [osx]
     - {{ compiler('cxx') }} # [osx]
+  host:
+    - xtcdata
+    - rapidjson
+    - libcurl
   run:
     - xtcdata
     - libcurl
