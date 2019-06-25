@@ -17,10 +17,12 @@ requirements:
     - {{ compiler('c') }}   # [osx]
     - {{ compiler('cxx') }} # [osx]
   host:
+    - python
     - xtcdata
     - rapidjson
     - libcurl
   run:
+    - python
     - xtcdata
     - libcurl
     - llvm-openmp   # [osx]
