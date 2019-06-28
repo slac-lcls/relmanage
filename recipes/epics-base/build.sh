@@ -5,12 +5,6 @@ EPICS_BASE=$PREFIX/epics
 EPICS_HOST_ARCH=$(startup/EpicsHostArch)
 export EPICS_HOST_ARCH
 
-GNU_DIR=$(dirname $(dirname $(which gcc)))
-if [ "$GNU_DIR" != "/usr" ]; then
-    echo "GNU_DIR="$GNU_DIR >> configure/CONFIG_COMMON
-    # echo "CMPLR_PREFIX=x86_64-conda_cos6-linux-gnu-" >> configure/CONFIG_COMMON
-fi
-
 make -j $CPU_COUNT INSTALL_LOCATION=$EPICS_BASE
 
 # Symlink libraries into $PREFIX/lib
