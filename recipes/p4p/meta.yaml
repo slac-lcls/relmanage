@@ -6,19 +6,22 @@ package:
 
 source:
   git_url: https://github.com/mdavidsaver/p4p.git
-  git_tag: 3.3.0
+  git_tag: master
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - epics-base >=7
     - numpy
   run:
     - python
-    - epics-base
+    - epics-base >=7
     - numpy
   test:
     requires:

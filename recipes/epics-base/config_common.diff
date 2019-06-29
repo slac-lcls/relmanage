@@ -1,5 +1,5 @@
 diff --git a/configure/CONFIG_COMMON b/configure/CONFIG_COMMON
-index d3a6696..8ad191e 100644
+index d3a6696..c01374b 100644
 --- a/configure/CONFIG_COMMON
 +++ b/configure/CONFIG_COMMON
 @@ -48,7 +48,7 @@ CHECK_RELEASE_WARN = warnRelease
@@ -30,7 +30,7 @@ index d3a6696..8ad191e 100644
 -USR_CXXFLAGS =
 -USR_LDFLAGS =
 +USR_CXXFLAGS = -std=c++11
-+USR_LDFLAGS = -L$(PREFIX)/lib -Wl,-rpath-link,$(PREFIX)/lib
++USR_LDFLAGS = -L$(PREFIX)/lib -Wl,-rpath-link,$(PREFIX)/lib -Wl,-rpath,$(PREFIX)/lib
  USR_LIBS =
  USR_CPPFLAGS =
  USR_DBDFLAGS =
