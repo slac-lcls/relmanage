@@ -8,7 +8,8 @@ source:
   git_url: https://github.com/epics-base/epics-base.git
   git_tag: R{{ version }}
   patches:
-    - config_common.diff
+    - config_common.diff      # [linux]
+    - config_common_osx.diff  # [osx]
 
 build:
   number: 22
