@@ -10,6 +10,7 @@ source:
   patches:
     - config_common.diff      # [linux]
     - config_common_osx.diff  # [osx]
+    - pvdata_templates.diff   # [osx]
 
 build:
   number: 0
