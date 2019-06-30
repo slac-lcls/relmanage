@@ -30,7 +30,7 @@ index d3a66968f..2ca4698b4 100644
 -USR_CXXFLAGS =
 -USR_LDFLAGS =
 +USR_CXXFLAGS = -std=c++11 -stdlib=libc++
-+USR_LDFLAGS = -undefined dynamic_lookup -L$(PREFIX)/lib -Wl,-rpath,$(PREFIX)/lib
++USR_LDFLAGS = -L$(PREFIX)/lib -Wl,-rpath,$(PREFIX)/lib
  USR_LIBS =
  USR_CPPFLAGS =
  USR_DBDFLAGS =
