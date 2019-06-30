@@ -1,4 +1,4 @@
-{% set version = "7.0.2" %}
+{% set version = "7.0.2.2" %}
 
 package:
   name: epics-base
@@ -12,7 +12,7 @@ source:
     - config_common_osx.diff  # [osx]
 
 build:
-  number: 22
+  number: 0
 
 requirements:
   build:
