@@ -5,6 +5,9 @@ cat <<EOF > configure/RELEASE.local
 EPICS_BASE=$EPICS_BASE
 EOF
 
+# setup the compiler environment variables needed by EPICS
+source $RECIPE_DIR/find_compiler.sh
+
 make -j $CPU_COUNT INSTALL_LOCATION=$PREFIX/pcas
 
 # Symlink libraries into $PREFIX/lib
