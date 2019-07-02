@@ -19,8 +19,9 @@ requirements:
   build:
     - perl
     - readline
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    # use conda compilers only with osx for now
+    - {{ compiler('c') }}   # [osx]
+    - {{ compiler('cxx') }} # [osx]
   host:
     - readline
   run:

@@ -7,7 +7,7 @@ index d3a66968f..2ca4698b4 100644
  # GNU_DIR definition is here because it is used to find
  # READLINE library even if GNU compiler is not used
 -GNU_DIR = /usr
-+GNU_DIR = $(CONDA_PREFIX)
++GNU_DIR = $(GNU_DIR_OVERRIDE)
  
  #-------------------------------------------------------
  # Directories
@@ -16,7 +16,7 @@ index d3a66968f..2ca4698b4 100644
  OBJ = .o
  CMPLR_SUFFIX =
 -CMPLR_PREFIX =
-+CMPLR_PREFIX = $(CONDA_BACKUP_HOST)-
++CMPLR_PREFIX = $(CMPLR_PREFIX_OVERRIDE)
  LIB_PREFIX =
  LIB_SUFFIX =
  SHRLIB_PREFIX = $(LIB_PREFIX)

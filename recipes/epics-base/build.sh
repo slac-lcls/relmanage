@@ -5,6 +5,18 @@ EPICS_BASE=$PREFIX/epics
 EPICS_HOST_ARCH=$(startup/EpicsHostArch)
 export EPICS_HOST_ARCH
 
+if [ -z "${CONDA_BACKUP_HOST}" ]; then
+    echo "Building without the conda compilers:"
+    export GNU_DIR_OVERRIDE="$(dirname $(dirname $(which gcc)))"
+    export CMPLR_PREFIX_OVERRIDE=""
+else
+    echo "Building with the conda compilers:"
+    export GNU_DIR_OVERRIDE='$(CONDA_PREFIX)'
+    export CMPLR_PREFIX_OVERRIDE='$(CONDA_BACKUP_HOST)-'
+fi
+echo "\tGNU_DIR_OVERRIDE      = $GNU_DIR_OVERRIDE"
+echo "\tCMPLR_PREFIX_OVERRIDE = $CMPLR_PREFIX_OVERRIDE"
+
 make -j $CPU_COUNT INSTALL_LOCATION=$EPICS_BASE
 
 # Symlink libraries into $PREFIX/lib
