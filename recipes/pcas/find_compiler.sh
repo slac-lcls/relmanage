@@ -1,5 +1,9 @@
 echo "Attempting to determine the compiler used by the build script..."
-if [ -n "$GCC" ]; then
+if [ -n "$CLANG" ]; then
+    COMPILER_PATH="$(which $CLANG)"
+    COMPILER_BASE="$(basename $CLANG)"
+    COMPILER_NAME="clang"
+elif [ -n "$GCC" ]; then
     COMPILER_PATH="$(which $GCC)"
     COMPILER_BASE="$(basename $GCC)"
     COMPILER_NAME="gcc"
