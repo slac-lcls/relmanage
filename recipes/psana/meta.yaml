@@ -27,6 +27,7 @@ requirements:
     - python
     - numpy
     - matplotlib
+    - xtcdata
     - psalg
     - requests
     - mpi   # [osx]
