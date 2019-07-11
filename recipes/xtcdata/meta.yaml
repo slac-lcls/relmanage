@@ -10,5 +10,5 @@ build:
 requirements:
   build:
     - cmake
-    - {{ compiler('c') }}   # [osx]
-    - {{ compiler('cxx') }} # [osx]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
