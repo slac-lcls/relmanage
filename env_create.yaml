@@ -24,6 +24,8 @@ dependencies:
   - pydm
   - dill
   - flake8
+  - h5py
+  - krtc
   - cpsw     # daq packages
   - p4p
   - libfabric
@@ -35,3 +37,6 @@ dependencies:
   - prometheus-cpp
   - amityping
   - mypy
+  - rogue-ne
+  - bluesky
+  - ophyd
