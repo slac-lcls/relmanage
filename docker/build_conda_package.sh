@@ -8,6 +8,6 @@ function build_image {
     docker build --build-arg SETUP_SCRIPT=docker/conda_build.sh --build-arg PYVER=$py_version --build-arg PACKAGE=$PACKAGE -f docker/Dockerfile.$os_name .
 }
 
-for py_version in ${PYVER:-2.7 3.6}; do
+for py_version in ${PYVER:-2.7 3.7}; do
     build_image centos 7 $py_version
 done

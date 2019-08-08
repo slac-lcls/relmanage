@@ -19,7 +19,7 @@ ARG CONDA_ENV_FILE=env_create.yaml
 ARG SETUP_SCRIPT=docker/make_conda_env.sh
 
 # Note: used for build_conda_package.sh
-ARG PYVER=3.6
+ARG PYVER=3.7
 ARG PACKAGE=package_name
 
 ADD $CONDA_ENV_FILE .

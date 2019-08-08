@@ -17,7 +17,7 @@ function build_image {
 
 }
 
-for py_version in ${PYVER:-2.7 3.6}; do
+for py_version in ${PYVER:-2.7 3.7}; do
     build_image ubuntu 16.04 $py_version
     build_image centos 7 $py_version
 done
