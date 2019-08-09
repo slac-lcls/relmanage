@@ -6,10 +6,10 @@ package:
 
 source:
   git_url: https://github.com/mdavidsaver/p4p.git
-  git_tag: master
+  git_tag: {{ version }}
 
 build:
-  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  number: 1
 
 requirements:
   build:
@@ -21,7 +21,7 @@ requirements:
     - numpy
   run:
     - python
-    - epics-base >=7
+    - {{ pin_compatible('epics-base', max_pin='x.x.x.x') }}
     - numpy
   test:
     requires:
