@@ -1,0 +1,16 @@
+{% set version = "0.0.3" %} 
+{% set build = "1" %}
+
+package:
+  name: roentdek
+  version: {{ version }}
+
+source:
+  url: file:///reg/common/package/hexanodelib/hexanode-proxy-{{version}}.tar.gz
+
+build:
+  number: {{build}}
+
+about:
+  summary: "This is a binary distribution from Achim Czasch <czasch@atom.uni-frankfurt.de>
+, received through email with Mikhail and Timur, for working with a detector discussed here: http://www.roentdek.com/, see the email-czachim.txt file in the source distribution. We're only going to take the static lib and header file and put it in the conda release."
