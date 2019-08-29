@@ -27,6 +27,7 @@ dependencies:
   - h5py
   - krtc
   - gsl
+  - roentdek
   - cpsw     # daq packages
   - p4p
   - libfabric
