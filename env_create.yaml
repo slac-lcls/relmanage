@@ -26,7 +26,6 @@ dependencies:
   - flake8
   - h5py
   - krtc
-  - gsl
   - roentdek
   - cpsw     # daq packages
   - p4p
