@@ -11,9 +11,9 @@ env:
 
 jobs:
   include:
-    - stage: conda build
-      env: PACKAGE=legion
-      script: ./docker/build_conda_package.sh
+    # - stage: conda build
+    #   env: PACKAGE=legion
+    #   script: ./docker/build_conda_package.sh
     - &docker-build
       stage: docker build
       env: PYVER=2.7
