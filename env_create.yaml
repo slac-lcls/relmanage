@@ -41,3 +41,4 @@ dependencies:
   - rogue-ne
   - bluesky
   - ophyd
+  - pcieapps
