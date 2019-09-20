@@ -1,0 +1,55 @@
+# cpo modified this recipe from the default recipe in
+# anaconda.org/tidair-tag:
+# - remove epics/pyepics from build/run dependencies
+# - change pkg name to rogue-ne
+
+package: 
+  name: rogue-ne
+
+  version: {{ environ.get('GIT_DESCRIBE_TAG') }}
+
+source:
+   git_url: https://github.com/slaclab/rogue.git
+   git_rev: pre-release
+
+build:
+   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
+requirements:
+   build:
+     - python
+     - gcc_linux-64   [linux]
+     - gxx_linux-64   [linux]
+     - clang_osx-64   [osx]
+     - clangxx_osx-64 [osx]
+     - boost
+     - cmake
+     - make
+     - bzip2
+     - zeromq
+     - git
+
+   run:
+     - python
+     - git
+     - git-lfs
+     - ipython
+     - boost
+     - cmake
+     - make
+     - bzip2
+     - zeromq
+     - pyyaml
+     - jsonpickle
+     - pyzmq
+     - parse
+     - click
+     - numpy
+     - pyqt
+
+about:
+   home: https://github.com/slaclab/rogue
+   license: SLAC Open License
+   license_file: LICENSE.txt
+   summary: SLAC Python Based Hardware Abstraction And Data Acquisition System
+
