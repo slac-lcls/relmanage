@@ -37,3 +37,4 @@ requirements:
     - amityping
     - mypy_extensions
     - bitstruct
+    - h5py
