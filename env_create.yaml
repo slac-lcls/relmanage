@@ -36,6 +36,7 @@ dependencies:
   - requests
   - ipdb
   - prometheus-cpp
+  - prometheus-client
   - amityping
   - mypy
   - rogue-ne
