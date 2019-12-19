@@ -1,12 +1,9 @@
-{% set version = "1.2.0" %}
-
 package:
   name: psdaq
-  version: {{ version }}
+  version: '{{ environ.get("GIT_DESCRIBE_TAG", "0.0.0") }}'
 
 source:
   git_url: https://github.com/slac-lcls/lcls2.git
-  git_rev: master
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
@@ -19,15 +16,25 @@ requirements:
     - python
     - cpsw
     - libfabric
-    - epics-base
     - zeromq
+    - p4p
   run:
     - xtcdata
     - psalg
     - python
     - cpsw
     - libfabric 
-    - epics-base
+    - rapidjson
+    - transitions
+    - requests
     - transitions
     - zeromq
+    - prometheus-cpp
     - prometheus_client
+    - amityping
+    - mypy
+    - rogue-ne
+    - bluesky
+    - ophyd
+    - pcieapps
+    - p4p

@@ -1,12 +1,9 @@
-{% set version = "1.2.0" %}
-
 package:
   name: xtcdata
-  version: {{ version }}
+  version: '{{ environ.get("GIT_DESCRIBE_TAG", "0.0.0") }}'
 
 source:
   git_url: https://github.com/slac-lcls/lcls2.git
-  git_rev: master
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
@@ -15,5 +12,3 @@ requirements:
     - cmake
     - {{ compiler('c') }}   # [osx]
     - {{ compiler('cxx') }} # [osx]
-  host:
-    - rapidjson
