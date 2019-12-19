@@ -17,16 +17,17 @@ dependencies:
   - curl
   - bitstruct
   - mypy_extensions
-  - pyzmq
-  - pyqt
-  - pyqtgraph
   - psmon
-  - pydm
-  - dill
-  - flake8
   - h5py
   - krtc
   - roentdek
+  - asyncqt # ami
+  - networkfox
+  - pyzmq
+  - pyqt
+  - pyqtgraph
+  - dill
+  - flake8
   - cpsw     # daq packages
   - p4p
   - libfabric
