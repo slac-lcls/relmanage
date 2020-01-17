@@ -9,7 +9,7 @@
 {% set version = "0.0.1" %}
 
 package:
-  name: pcieapps
+  name: timetooldev
   version: {{ version }}
 
 #source:

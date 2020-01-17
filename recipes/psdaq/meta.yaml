@@ -36,5 +36,5 @@ requirements:
     - rogue-ne
     - bluesky
     - ophyd
-    - pcieapps
+    - timetooldev
     - p4p
