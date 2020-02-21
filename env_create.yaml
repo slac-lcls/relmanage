@@ -15,10 +15,9 @@ dependencies:
   - mongodb
   - pymongo
   - curl
-  - bitstruct
   - mypy_extensions
   - psmon
-  - h5py
+  - h5py>=2.10 # needed by small-h5 writer
   - krtc
   - roentdek
   - asyncqt # ami
@@ -28,6 +27,9 @@ dependencies:
   - pyqtgraph
   - dill
   - flake8
+  - opencv   # xtcav
+  - scikit-learn # xtcav
+  - numba    # ami
   - cpsw     # daq packages
   - p4p
   - libfabric
@@ -43,4 +45,3 @@ dependencies:
   - rogue-ne
   - bluesky
   - ophyd
-  - timetooldev

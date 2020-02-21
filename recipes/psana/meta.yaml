@@ -33,9 +33,11 @@ requirements:
     - pymongo
     - amityping
     - mypy_extensions
-    - h5py
+    - h5py>=2.10 # needed by small-h5 writer
     - pyzmq
     - psmon
     - h5py
     - krtc
     - legion
+    - opencv # for xtcav
+    - scikit-learn # for xtcav

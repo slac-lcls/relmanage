@@ -36,5 +36,4 @@ requirements:
     - rogue-ne
     - bluesky
     - ophyd
-    - timetooldev
     - p4p
