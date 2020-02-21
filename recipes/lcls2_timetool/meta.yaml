@@ -9,7 +9,7 @@
 {% set version = "3.1.0" %}
 
 package:
-  name: timetool
+  name: lcls2_timetool
   version: {{ version }}
 
 source:
@@ -20,7 +20,7 @@ source:
 build:
   noarch: python
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
-  script: cd firmware/common/python; $PYTHON setup.py install  --single-version-externally-managed --record=record.txt
+  script: git submodule update --recursive; cd firmware/common/python; $PYTHON setup.py install  --single-version-externally-managed --record=record.txt
 
 requirements:
   build:

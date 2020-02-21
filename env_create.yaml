@@ -45,3 +45,4 @@ dependencies:
   - rogue-ne
   - bluesky
   - ophyd
+  - lcls2_timetool

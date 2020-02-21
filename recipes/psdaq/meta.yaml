@@ -37,3 +37,4 @@ requirements:
     - bluesky
     - ophyd
     - p4p
+    - lcls2_timetool
