@@ -27,7 +27,7 @@ do
 done
 
 echo "Create new default environment $version"
-conda create -c $channel --name $version python=$pyver xtcdata
+conda create -c $channel --name $version python=$pyver psdaq ami
 
 echo "Removing make release log files"
 rm .make_release_log*
