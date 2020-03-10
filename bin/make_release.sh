@@ -1,7 +1,8 @@
-#!/bin/bash
 # Build lcls2 packages and create a new conda release version
-# NOTE: Run this under the same shell to avoid misplacing the new 
-# environment created in this script.
+# NOTE: Run this under the same shell ("source ...") to avoid misplacing
+# the new environment created in this script.  We don't understand why
+# running it in a different shell with "#!/bin/bash" doesn't work
+# - mona and cpo
 
 set -e
 
@@ -53,7 +54,7 @@ do
 done
 
 echo "Create new default environment $version"
-conda create -c $channel --name $version python=$pyver psdaq ami
+conda create -y --name $version python=$pyver psdaq ami
 
 echo "Removing make release log files"
 rm .make_release_log*
