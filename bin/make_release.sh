@@ -1,5 +1,7 @@
 #!/bin/bash
 # Build lcls2 packages and create a new conda release version
+# NOTE: Run this under the same shell to avoid misplacing the new 
+# environment created in this script.
 
 set -e
 
@@ -11,14 +13,18 @@ if [ $# -eq 0 ]; then
 fi 
 
 target="xtcdata,psalg,psana,psdaq,ami" # default packages
+channel="lcls-ii" # default channel
 
-while getopts "ht:" opt; do
+while getopts "ht:c:" opt; do
     case ${opt} in
         h ) echo $helps
             exit 0
             ;;
         t ) 
             target=$OPTARG
+            ;;
+        c ) 
+            channel=$OPTARG
             ;;
         \? ) echo $helps
             exit 0
@@ -34,7 +40,6 @@ if [ -z "$version" ]; then echo $helps; exit; fi
 IFS=',' read -ra pkgs <<< "$target"
 pyver="3.7"
 reldir="/reg/g/psdm/sw/conda2/manage/recipes/"
-channel="lcls-ii"
 
 echo "Build $target and upload to $channel for release: $version"
 
