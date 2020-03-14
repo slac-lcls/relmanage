@@ -19,3 +19,5 @@ requirements:
   run:
     - python
     - networkx
+    - pydot
+    - graphviz

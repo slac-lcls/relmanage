@@ -1,0 +1,20 @@
+package:
+  name: hdf5-parallel
+  version: 1.10.6  # LCLS uses openmpi v4, which requires hdf5 >=10.5
+
+source:
+  url: https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.6/src/hdf5-1.10.6.tar.bz2
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - zlib # don't add openmpi since we'll pick up LCLS site-specific version in build.sh
+
+  run:
+    - zlib # don't add openmpi since we'll pick up LCLS site-specific version in build.sh
+
+about:
+  home: http://www.hdfgroup.org/HDF5/
+  license: BSD-style (http://www.hdfgroup.org/ftp/HDF5/current/src/unpacked/COPYING)

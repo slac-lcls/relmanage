@@ -30,6 +30,8 @@ dependencies:
   - opencv   # xtcav
   - scikit-learn # xtcav
   - numba    # ami
+  - pydot    # ami
+  - graphviz # ami
   - cpsw     # daq packages
   - p4p
   - libfabric
