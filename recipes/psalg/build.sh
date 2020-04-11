@@ -5,4 +5,4 @@ cmake -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_PREFIX_PATH=$PREFIX -DCMAKE_BUILD_T
 make -j $CPU_COUNT
 make install
 cd ..
-$PYTHON setup.py install --single-version-externally-managed --record=record.txt
+$PYTHON setup.py install --single-version-externally-managed --record=record.txt --version=$PKG_VERSION
