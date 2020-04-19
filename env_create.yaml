@@ -48,3 +48,5 @@ dependencies:
   - bluesky
   - ophyd
   - lcls2_timetool
+  - wave8
+  - cameralink_gateway

@@ -38,3 +38,5 @@ requirements:
     - ophyd
     - p4p
     - lcls2_timetool
+    - wave8
+    - cameralink-gateway
