@@ -24,14 +24,16 @@ dependencies:
   - networkfox
   - pyzmq
   - pyqt
-  - pyqtgraph
+  - pyqtgraph=0.11.0rc0
   - dill
   - flake8
   - opencv   # xtcav
-  - scikit-learn # xtcav
+  - scikit-learn # xtcav and tmo pop alg
   - numba    # ami
   - pydot    # ami
   - graphviz # ami
+  - qtpy     # ami
+  - sympy    # ami
   - cpsw     # daq packages
   - p4p
   - libfabric
@@ -49,4 +51,6 @@ dependencies:
   - ophyd
   - lcls2_timetool
   - wave8
-  - cameralink_gateway
+  - cameralink-gateway
+  - pyabel  # for tmo pop algorithm
+  - sklearn # for tmo pop algorithm

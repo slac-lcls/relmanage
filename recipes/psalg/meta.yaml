@@ -17,7 +17,7 @@ requirements:
     - python
     - xtcdata
     - rapidjson
-    - libcurl
+    - libcurl=7.67.0 # cpo: hack to prevent conflict with pykerberos depending on old krb5
     - roentdek # [linux]
   run:
     - python

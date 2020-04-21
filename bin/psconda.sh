@@ -11,6 +11,10 @@ unset PYTHONPATH
 source /reg/g/psdm/sw/conda2/inst/etc/profile.d/conda.sh
 
 # user can pick up python2 by adding "-py2" option to setup_env.sh
-conda activate ps-2.0.5$@
+conda activate ps-2.1.2$@
+
+if [ ! -d /usr/share/X11/xkb ]; then
+    export QT_XKB_CONFIG_ROOT=${CONDA_PREFIX}/lib
+fi
 
 export MANPATH=$CONDA_PREFIX/share/man${MANPATH:+:${MANPATH}}

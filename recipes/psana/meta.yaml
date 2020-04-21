@@ -40,4 +40,5 @@ requirements:
     - krtc
     - legion
     - opencv # for xtcav
-    - scikit-learn # for xtcav
+    - scikit-learn # for xtcav and tmo pop alg
+    - pyabel # for tmo pop alg

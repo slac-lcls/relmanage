@@ -10,7 +10,7 @@ helps="Usage: cmd [-h] [-t pkg,pkg] version"
 
 if [ $# -eq 0 ]; then
     echo $helps
-    exit 0
+    return 0
 fi 
 
 target="xtcdata,psalg,psana,psdaq,ami" # default packages
@@ -19,7 +19,7 @@ channel="lcls-ii" # default channel
 while getopts "ht:c:" opt; do
     case ${opt} in
         h ) echo $helps
-            exit 0
+            return 0
             ;;
         t ) 
             target=$OPTARG
@@ -28,7 +28,7 @@ while getopts "ht:c:" opt; do
             channel=$OPTARG
             ;;
         \? ) echo $helps
-            exit 0
+            return 0
             ;;
     esac
 done
@@ -36,7 +36,7 @@ shift $((OPTIND -1))
 
 version=${1}
 
-if [ -z "$version" ]; then echo $helps; exit; fi
+if [ -z "$version" ]; then echo $helps; return; fi
 
 IFS=',' read -ra pkgs <<< "$target"
 pyver="3.7"
