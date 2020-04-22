@@ -11,4 +11,15 @@ source:
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
 requirements:
+  build:
+    - cmake
+    - make
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ cdt('libibverbs') }}
+    - {{ cdt('libibverbs-devel') }}
+    - {{ cdt('libnl') }}
+    - {{ cdt('librdmacm') }}
+    - {{ cdt('librdmacm-devel') }}
