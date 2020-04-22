@@ -25,8 +25,12 @@ requirements:
     - python
     - cpsw
     - libfabric
+    - epics-base >=7
+    - prometheus-cpp
+    - rapidjson
     - zeromq
     - p4p
+    - zlib
   run:
     - xtcdata
     - psalg
@@ -36,7 +40,6 @@ requirements:
     - rapidjson
     - transitions
     - requests
-    - transitions
     - zeromq
     - prometheus-cpp
     - prometheus_client
@@ -47,3 +50,5 @@ requirements:
     - ophyd
     - p4p
     - lcls2_timetool
+    - epics-base >=7
+    - zlib
