@@ -10,6 +10,6 @@
 
 # feels like maybe the above needs a new version of some autoconf tools?
 
-./configure --enable-verbs --prefix=$PREFIX
-make -j2
-make install
+./configure --enable-verbs --prefix=${PREFIX}
+${BUILD_PREFIX}/bin/make -j2
+${BUILD_PREFIX}/bin/make install

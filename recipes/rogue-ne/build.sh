@@ -8,5 +8,5 @@ cd build
 sed -i 's/3.6/3.7/' ../CMakeLists.txt
 # cpo added -DNO_EPICS=1 to standard conda recipe from
 # anaconda.org/tidair-tag
-cmake .. -DROGUE_INSTALL=conda -DROGUE_DIR=${PREFIX} -DNO_EPICS=1
-make -j ${CPU_COUNT} install
+${BUILD_PREFIX}/bin/cmake .. -DROGUE_INSTALL=conda -DROGUE_DIR=${PREFIX} -DNO_EPICS=1
+${BUILD_PREFIX}/bin/make -j ${CPU_COUNT} install
