@@ -53,4 +53,4 @@ dependencies:
   - wave8
   - cameralink-gateway
   - pyabel  # for tmo pop algorithm
-  - sklearn # for tmo pop algorithm
+  - scikit-learn # for tmo pop algorithm
