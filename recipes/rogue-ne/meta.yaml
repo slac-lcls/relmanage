@@ -23,23 +23,14 @@ requirements:
     - {{ compiler('cxx') }}
    host:
      - python
-     - boost=1.69
-     - gcc_linux-64   [linux]
-     - gxx_linux-64   [linux]
-     - clang_osx-64   [osx]
-     - clangxx_osx-64 [osx]
-     - git
-     - cmake
-     - make
+     - boost
      - bzip2
      - zeromq
      - numpy
-
    run:
      - python
-     - boost=1.69
-     - cmake
-     - make
+     - libboost
+     - py-boost
      - bzip2
      - zeromq
      - numpy
