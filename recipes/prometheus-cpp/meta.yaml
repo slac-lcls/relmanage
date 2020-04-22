@@ -14,6 +14,9 @@ build:
 requirements:
   build:
     - cmake
+    - make
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - zlib
     - libcurl
