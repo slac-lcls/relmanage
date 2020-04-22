@@ -16,6 +16,9 @@ build:
 
 requirements:
   build:
+    - cmake
+    - make
+    - which
     - perl
     - readline
     - {{ compiler('c') }}
