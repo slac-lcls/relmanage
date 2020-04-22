@@ -6,7 +6,7 @@
 # as psrel.  for now I'm working around this by doing conda-build as
 # a user with read permission, not psrel. -cpo
 
-{% set version = "3.1.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: lcls2_timetool
