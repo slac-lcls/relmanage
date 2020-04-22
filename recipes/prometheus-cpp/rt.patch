@@ -1,0 +1,39 @@
+diff --git a/core/CMakeLists.txt b/core/CMakeLists.txt
+index f520cee..d102509 100644
+--- a/core/CMakeLists.txt
++++ b/core/CMakeLists.txt
+@@ -22,7 +22,7 @@ add_library(${PROJECT_NAME}::core ALIAS core)
+ target_link_libraries(core
+   PRIVATE
+     Threads::Threads
+-    $<$<AND:$<BOOL:UNIX>,$<NOT:$<BOOL:APPLE>>>:rt>
++    rt
+ )
+ 
+ target_include_directories(core
+diff --git a/pull/CMakeLists.txt b/pull/CMakeLists.txt
+index edca403..e498191 100644
+--- a/pull/CMakeLists.txt
++++ b/pull/CMakeLists.txt
+@@ -24,7 +24,7 @@ target_link_libraries(pull
+   PRIVATE
+     Threads::Threads
+     ${CIVETWEB_LIBRARIES}
+-    $<$<AND:$<BOOL:UNIX>,$<NOT:$<BOOL:APPLE>>>:rt>
++    rt
+     $<$<BOOL:${ENABLE_COMPRESSION}>:ZLIB::ZLIB>
+ )
+ 
+diff --git a/push/CMakeLists.txt b/push/CMakeLists.txt
+index 4e4002e..6acd203 100644
+--- a/push/CMakeLists.txt
++++ b/push/CMakeLists.txt
+@@ -13,7 +13,7 @@ target_link_libraries(push
+   PRIVATE
+     Threads::Threads
+     ${CURL_LIBRARIES}
+-    $<$<AND:$<BOOL:UNIX>,$<NOT:$<BOOL:APPLE>>>:rt>
++    rt
+ )
+ 
+ target_include_directories(push
