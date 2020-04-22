@@ -1,0 +1,13 @@
+diff --git a/bindings/python/legion_cffi_build.py b/bindings/python/legion_cffi_build.py
+index 9d9afccac..9629e2e04 100644
+--- a/bindings/python/legion_cffi_build.py
++++ b/bindings/python/legion_cffi_build.py
+@@ -47,7 +47,7 @@ def build(defines_dir, output_dir):
+         # For Make, legion_defines.h is in the source directory:
+         build_flags = ['-I', os.path.dirname(os.path.realpath(__file__))]
+ 
+-    header = subprocess.check_output(['gcc', '-I', prefix_dir] + build_flags + ['-DLEGION_USE_PYTHON_CFFI', '-E', '-P', legion_h_path]).decode('utf-8')
++    header = subprocess.check_output([os.path.expandvars("$CC"), '-I', prefix_dir] + build_flags + ['-DLEGION_USE_PYTHON_CFFI', '-E', '-P', legion_h_path]).decode('utf-8')
+ 
+     with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'legion_cffi.py.in')) as f:
+         content = f.read()

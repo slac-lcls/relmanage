@@ -7,6 +7,8 @@ package:
 source:
   git_url: https://gitlab.com/StanfordLegion/legion.git
   git_rev: control_replication
+  patches:
+    - legion_cffi_build_gcc.patch
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
@@ -17,6 +19,8 @@ build:
 requirements:
   build:
     - cmake
+    - make
+    - perl
     - zlib
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
