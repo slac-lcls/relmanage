@@ -23,7 +23,6 @@ requirements:
     - xtcdata
     - psalg
     - python
-    - cpsw
     - libfabric
     - epics-base >=7
     - prometheus-cpp
@@ -35,7 +34,6 @@ requirements:
     - xtcdata
     - psalg
     - python
-    - cpsw
     - libfabric 
     - rapidjson
     - transitions
