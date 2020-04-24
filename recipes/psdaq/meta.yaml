@@ -14,7 +14,6 @@ requirements:
     - xtcdata
     - psalg
     - python
-    - cpsw
     - libfabric
     - zeromq
     - p4p
@@ -22,7 +21,6 @@ requirements:
     - xtcdata
     - psalg
     - python
-    - cpsw
     - libfabric 
     - rapidjson
     - transitions

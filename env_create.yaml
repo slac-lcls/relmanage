@@ -34,8 +34,7 @@ dependencies:
   - graphviz # ami
   - qtpy     # ami
   - sympy    # ami
-  - cpsw     # daq packages
-  - p4p
+  - p4p      # daq packages
   - libfabric
   - rapidjson
   - transitions
