@@ -19,13 +19,13 @@ requirements:
     - python
     - dill
     - pyzmq
-    - pyqtgraph=0.11.0rc0
+    - pyqtgraph>=0.11.0rc0
     - networkfox
     - psana
     - ipython
     - qtpy
     - asyncqt
-    - amityping
+    - amityping>=1.0.9
     - mypy
     - numba
     - h5py # optional: to use h5 source
