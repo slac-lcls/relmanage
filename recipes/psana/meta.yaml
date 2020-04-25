@@ -38,7 +38,7 @@ requirements:
     - psmon
     - h5py
     - krtc
-    - legion
+    - legion  # [linux]
     - opencv # for xtcav
     - scikit-learn # for xtcav and tmo pop alg
     - pyabel # for tmo pop alg
