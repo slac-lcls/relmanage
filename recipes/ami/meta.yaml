@@ -1,6 +1,8 @@
+{% set version = environ.get("GIT_DESCRIBE_TAG", "0.0.0") %}
+
 package:
   name: ami
-  version: '{{ environ.get("GIT_DESCRIBE_TAG", "0.0.0") }}'
+  version: {{ version }}
 
 source:
   git_url: https://github.com/slac-lcls/ami.git
