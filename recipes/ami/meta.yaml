@@ -35,3 +35,5 @@ requirements:
     - scipy # optional: more algorithms
     - pytest-qt # optional: for test
     - sympy
+    - htop # optional: for memory leak debugging
+    - setproctitle

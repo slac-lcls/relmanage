@@ -1,8 +1,8 @@
 channels:
   - lcls-ii
   - pydm-tag
-  - defaults
   - conda-forge
+  - defaults
 dependencies:
   - python=PYTHONVER
   - cmake
@@ -20,8 +20,11 @@ dependencies:
   - h5py>=2.10 # needed by small-h5 writer
   - krtc
   - roentdek
+  - htop
   - asyncqt # ami
-  - networkfox
+  - setproctitle # ami
+  - pyarrow # ami
+  - networkfox # ami
   - pyzmq
   - pyqt
   - pyqtgraph=0.11.0rc0

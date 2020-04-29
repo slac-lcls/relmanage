@@ -15,19 +15,19 @@ requirements:
     - psalg
     - python
     - libfabric
+    - rapidjson
     - zeromq
     - p4p
+    - prometheus-cpp
   run:
     - xtcdata
     - psalg
     - python
     - libfabric 
-    - rapidjson
     - transitions
     - requests
     - transitions
     - zeromq
-    - prometheus-cpp
     - prometheus_client
     - amityping
     - mypy

@@ -39,6 +39,7 @@ requirements:
     - h5py
     - krtc
     - legion  # [linux]
+    - ipykernel # for jupyter
     - opencv # for xtcav
     - scikit-learn # for xtcav and tmo pop alg
     - pyabel # for tmo pop alg
