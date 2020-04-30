@@ -1,15 +1,46 @@
-{% set version = "15" %}
+{% set version = "13" %}
 
 package:
   name: rdma-core
   version: {{ version }}
 
 source:
-  git_url: https://github.com/linux-rdma/rdma-core.git
-  git_rev: v15
+  - git_url: https://github.com/linux-rdma/rdma-core.git
+    git_rev: v{{ version }}
+  - path: ./ib_user_cm.h
+  - path: ./ib_user_sa.h
+  - path: ./ib_user_verbs.h
+  - path: ./rdma_user_cm.h
+  - patches:
+    - ./redhat-kernel-init-ocrdma-is-tech-preview.patch
+    - ./redhat-kernel-init-libi40iw-no-longer-tech-preview.patch
+    - ./fix-udma_to_device_barrier-on-aarch64.patch
+    - ./0001-srp_daemon-srp_daemon.c-Don-t-rely-on-attribute-offs.patch
+    - ./0002-srp_daemon-srp_daemon.c-Eliminate-some-unneeded-code.patch
+    - ./0003-srp_daemon-Use-consistent-format-when-printing-LID.patch
+    - ./0001-Use-integer-as-getopt_long-returns-integer.patch
+    - ./0001-libibumad-clean-up-htonll-ntohnll-handling.patch
+    - ./0001-ibverbs-Report-raw-packet-caps-as-part-of-query-devi.patch
+    - ./0002-ibverbs-Allow-creation-and-modification-of-WQ-with-c.patch
+    - ./0003-ibverbs-Allow-creation-of-QP-with-cvlan-stripping-of.patch
+    - ./0004-ibverbs-Add-an-option-to-poll-cvlan-value-from-a-CQ.patch
+    - ./0005-mlx5-Add-read_cvlan-support.patch
+    - ./0006-ibverbs-Add-support-for-scatter-FCS-ability-in-WQ.patch
+    - ./defines.patch
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
 requirements:
   build:
+    - python
+    - make
+    - cmake
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+  host:
+    - pkg-config
+    - sed
+    - libnl3
+  run:
+    - libnl3

@@ -1,0 +1,39 @@
+diff --git a/ibacm/src/acm_util.h b/ibacm/src/acm_util.h
+index a83d915f..ca64a344 100644
+--- a/ibacm/src/acm_util.h
++++ b/ibacm/src/acm_util.h
+@@ -44,6 +44,8 @@
+ 	acm_write(level, "%s: "format, __func__, ## __VA_ARGS__)
+ #endif /* ACME_PRINTS */
+ 
++#define NETLINK_RDMA		20
++
+ int acm_if_is_ib(char *ifname);
+ int acm_if_get_pkey(char *ifname, uint16_t *pkey);
+ int acm_if_get_sgid(char *ifname, union ibv_gid *sgid);
+diff --git a/iwpmd/iwarp_pm.h b/iwpmd/iwarp_pm.h
+index 1c7ac934..39355638 100644
+--- a/iwpmd/iwarp_pm.h
++++ b/iwpmd/iwarp_pm.h
+@@ -54,6 +54,8 @@
+ #include <ccan/list.h>
+ #include <rdma/rdma_netlink.h>
+ 
++#define NETLINK_RDMA		20
++
+ #define IWARP_PM_PORT          3935
+ #define IWARP_PM_VER_SHIFT     6
+ #define IWARP_PM_VER_MASK      0xc0
+diff --git a/libibcm/cm.h b/libibcm/cm.h
+index 6305e823..32eecc30 100644
+--- a/libibcm/cm.h
++++ b/libibcm/cm.h
+@@ -36,6 +36,8 @@
+ #if !defined(CM_H)
+ #define CM_H
+ 
++#  define __aligned_u64 __u64 __attribute__((aligned(8)))
++
+ #include <infiniband/verbs.h>
+ #include <infiniband/sa.h>
+ #include <endian.h>
