@@ -10,6 +10,8 @@
 
 # feels like maybe the above needs a new version of some autoconf tools?
 
+#cp ib_user_verbs.h include/rdma/
+#./configure --enable-sockets --enable-verbs --enable-usnic --disable-static --enable-psm --enable-psm2 --prefix=${PREFIX}
 ./configure --enable-verbs --prefix=${PREFIX}
-${BUILD_PREFIX}/bin/make -j2
+${BUILD_PREFIX}/bin/make -j ${CPU_COUNT}
 ${BUILD_PREFIX}/bin/make install
