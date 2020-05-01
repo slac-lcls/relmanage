@@ -16,33 +16,37 @@ build:
    number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 
 requirements:
-   build:
+  build:
+    - python
+    - numpy
     - cmake
     - make
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-   host:
-     - python
-     - boost
-     - bzip2
-     - zeromq
-     - numpy
-   run:
-     - python
-     - libboost
-     - py-boost
-     - bzip2
-     - zeromq
-     - numpy
-     - ipython
-     - pyyaml
-     - jsonpickle
-     - pyzmq
-     - parse
-     - click
-     - pyqt
-     - sqlalchemy
-     - pyserial
+  host:
+    - python
+    - boost
+    - bzip2
+    - zeromq
+    - numpy
+  run:
+    - python
+    - boost
+    - boost-cpp
+    - cmake
+    - make
+    - bzip2
+    - zeromq
+    - numpy
+    - ipython
+    - pyyaml
+    - jsonpickle
+    - pyzmq
+    - parse
+    - click
+    - pyqt
+    - sqlalchemy
+    - pyserial
 
 about:
    home: https://github.com/slaclab/rogue
