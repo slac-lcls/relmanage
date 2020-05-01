@@ -5,7 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: http://www.infradead.org/~tgr/libnl/files/libnl-{{ version }}.tar.gz
+  #url: http://www.infradead.org/~tgr/libnl/files/libnl-{{ version }}.tar.gz
+  url: ./libnl-{{ version }}.tar.gz
   patches:
     - ./0001-compare-v4-addr-rh1370503.patch
     - ./0002-msg-peek-by-default-rh1396882.patch
