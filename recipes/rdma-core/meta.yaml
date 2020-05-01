@@ -38,6 +38,8 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ cdt('libudev') }} 
+    - {{ cdt('libudev-devel') }} 
   host:
     - pkg-config
     - sed
