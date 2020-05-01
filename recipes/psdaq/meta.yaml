@@ -27,6 +27,7 @@ requirements:
     - epics-base >=7
     - prometheus-cpp
     - rapidjson
+    - readline
     - zeromq
     - p4p
     - zlib
@@ -36,6 +37,7 @@ requirements:
     - python
     - libfabric 
     - rapidjson
+    - readline
     - transitions
     - requests
     - zeromq
