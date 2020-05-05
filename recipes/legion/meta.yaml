@@ -26,6 +26,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
+    - cffi
   run:
     - cffi
     - numpy
