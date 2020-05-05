@@ -37,6 +37,7 @@ dependencies:
   - graphviz # ami
   - qtpy     # ami
   - sympy    # ami
+  - pytest-asyncio # ami
   - p4p      # daq packages
   - libfabric
   - rapidjson

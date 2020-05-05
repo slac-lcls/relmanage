@@ -31,3 +31,4 @@ dependencies:
   - clangxx_osx-64
   - llvm-openmp
   - h5py
+  - krtc

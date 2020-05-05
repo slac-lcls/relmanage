@@ -34,6 +34,7 @@ requirements:
     - pyarrow # optional: better pickling for arrays
     - scipy # optional: more algorithms
     - pytest-qt # optional: for test
+    - pytest-asyncio # optional: for test
     - sympy
     - htop # optional: for memory leak debugging
     - setproctitle
