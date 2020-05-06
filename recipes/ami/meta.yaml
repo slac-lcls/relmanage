@@ -27,7 +27,7 @@ requirements:
     - ipython
     - qtpy
     - asyncqt
-    - amityping>=1.1.1
+    - amityping>=1.1.2
     - mypy
     - numba
     - h5py # optional: to use h5 source
