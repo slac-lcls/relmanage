@@ -1,12 +1,13 @@
 #{% set version = "1.4.2" %}
-{% set version = "1.7.1" %}
+{% set version = "1.10.0" %}
 
 package:
   name: libfabric
   version: {{ version }}
 
 source:
-  - url: https://github.com/ofiwg/libfabric/releases/download/v{{ version }}/libfabric-{{ version }}.tar.bz2
+  - git_url: https://github.com/ofiwg/libfabric.git 
+    git_rev: v{{ version }}
   - path: ./ib_user_verbs.h
 
 build:
@@ -22,13 +23,13 @@ requirements:
     - {{ cdt('libuuid-devel') }}
   host:
     - libnl
-    - libnl3
+#    - libnl3
     - rdma-core
 #    - infinipath-psm
 #    - libpsm2
   run:
     - libnl
-    - libnl3
+#    - libnl3
     - rdma-core
 #    - infinipath-psm
 #    - libpsm2
