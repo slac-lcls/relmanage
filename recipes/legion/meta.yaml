@@ -20,7 +20,7 @@ requirements:
   build:
     - cmake
     - make
-    - patch
+    - git
     - perl
     - zlib
     - {{ compiler('c') }}
