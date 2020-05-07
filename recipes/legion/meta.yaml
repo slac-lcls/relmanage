@@ -23,10 +23,10 @@ requirements:
     - make
     - perl
     - zlib
-    - patch
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - patch
     - python
     - cffi
   run:
