@@ -1,5 +1,6 @@
 #{% set version = "1.4.2" %}
-{% set version = "1.10.0" %}
+#{% set version = "1.10.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: libfabric
@@ -29,7 +30,7 @@ requirements:
 #    - libpsm2
   run:
     - libnl
-#    - libnl3
+#    - libn3
     - rdma-core
 #    - infinipath-psm
 #    - libpsm2
