@@ -19,14 +19,13 @@ build:
 requirements:
   build:
     - cmake
-    - patch
     - make
+    - patch
     - perl
     - zlib
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - patch
     - python
     - cffi
   run:
