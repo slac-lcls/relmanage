@@ -7,27 +7,39 @@ source:
 
 build:
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
 requirements:
   build:
     - cmake
+    - make
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ cdt('libibverbs') }}
+    - {{ cdt('libibverbs-devel') }}
+    - {{ cdt('libnl') }}
+    - {{ cdt('librdmacm') }}
+    - {{ cdt('librdmacm-devel') }}
   host:
     - xtcdata
     - psalg
     - python
-    - cpsw
     - libfabric
+    - epics-base >=7
+    - prometheus-cpp
+    - rapidjson
+    - readline
     - zeromq
     - p4p
+    - zlib
   run:
     - xtcdata
     - psalg
     - python
-    - cpsw
     - libfabric 
     - rapidjson
+    - readline
     - transitions
     - requests
-    - transitions
     - zeromq
     - prometheus-cpp
     - prometheus_client
@@ -38,3 +50,5 @@ requirements:
     - ophyd
     - p4p
     - lcls2_timetool
+    - epics-base >=7
+    - zlib

@@ -1,11 +1,13 @@
 channels:
-  - lcls-ii
-  - pydm-tag
-  - defaults
+  - /reg/neh/home/valmar/conda-bld
   - conda-forge
+  - defaults
 dependencies:
   - python=PYTHONVER
   - cmake
+  - make
+  - gcc_linux-64
+  - gxx_linux-64
   - numpy
   - mpi4py   # psana packages (legion is optional)
   - legion
@@ -25,6 +27,8 @@ dependencies:
   - pyzmq
   - pyqt
   - pyqtgraph
+  - epics-base
+  - readline
   - dill
   - flake8
   - opencv   # xtcav
@@ -32,7 +36,6 @@ dependencies:
   - numba    # ami
   - pydot    # ami
   - graphviz # ami
-  - cpsw     # daq packages
   - p4p
   - libfabric
   - rapidjson

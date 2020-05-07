@@ -1,3 +1,5 @@
+#{% set version = "1.4.2" %}
+#{% set version = "1.10.0" %}
 {% set version = "1.7.1" %}
 
 package:
@@ -5,10 +7,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ofiwg/libfabric/releases/download/v1.7.1/libfabric-1.7.1.tar.bz2
-  #git_url: https://github.com/ofiwg/libfabric.git
-  #git_rev: v1.5.2
+  - git_url: https://github.com/ofiwg/libfabric.git 
+    git_rev: v{{ version }}
+  - path: ./ib_user_verbs.h
 
 build:
-  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  number: 0
+
 requirements:
+  build:
+    - cmake
+    - make
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ cdt('libuuid') }}
+    - {{ cdt('libuuid-devel') }}
+  host:
+    - libnl
+#    - libnl3
+    - rdma-core
+#    - infinipath-psm
+#    - libpsm2
+  run:
+    - libnl
+#    - libn3
+    - rdma-core
+#    - infinipath-psm
+#    - libpsm2
