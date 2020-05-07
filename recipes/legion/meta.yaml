@@ -21,6 +21,7 @@ requirements:
     - cmake
     - make
     - git
+    - patch
     - perl
     - zlib
     - {{ compiler('c') }}
