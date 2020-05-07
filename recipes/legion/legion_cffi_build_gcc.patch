@@ -1,5 +1,5 @@
 diff --git a/bindings/python/legion_cffi_build.py b/bindings/python/legion_cffi_build.py
-index 9d9afccac..9629e2e04 100644
+index 9d9afcc..9629e2e 100644
 --- a/bindings/python/legion_cffi_build.py
 +++ b/bindings/python/legion_cffi_build.py
 @@ -47,7 +47,7 @@ def build(defines_dir, output_dir):
