@@ -1,0 +1,27 @@
+# there is an issue with this: conda build does "git-clone --recursive"
+# but that fails, because the .gitmodules file doesn't use the "https:"
+# form for the submodules, it uses the "git@" form, and the psrel
+# account doesn't have permissions (or even a github account).  and
+# even the "https:" version seems to prompt for a password when run
+# as psrel.  for now I'm working around this by doing conda-build as
+# a user with read permission, not psrel. -cpo
+
+{% set version = "4.2.1" %}
+
+package:
+  name: cameralink-gateway
+  version: {{ version }}
+
+source:
+  - url: https://github.com/slaclab/cameralink-gateway/archive/l2si-rogue.zip
+  - path: ./checkout_submodules.py
+
+build:
+  noarch: python
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
+requirements:
+  build:
+    - python
+  run:
+    - python
