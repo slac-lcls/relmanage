@@ -1,5 +1,5 @@
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_PREFIX_PATH=$PREFIX ..
-make
-make install
+${BUILD_PREFIX}/bin/cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} -DCMAKE_PREFIX_PATH=${PREFIX} ..
+${BUILD_PREFIX}/bin/make
+${BUILD_PREFIX}/bin/make install

@@ -1,0 +1,23 @@
+{% set version = "1.1.4" %}
+
+package:
+  name: libnl
+  version: {{ version }}
+
+source:
+  url: http://www.infradead.org/~tgr/libnl/files/libnl-{{ version }}.tar.gz
+  url: http://www.infradead.org/~tgr/libnl/files/libnl-1.1.4.tar.gz
+  patches:
+    - libnl-1.0-pre8-more-build-output.patch
+    - libnl-1.1-doc-inlinesrc.patch
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - make
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - sed

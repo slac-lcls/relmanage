@@ -1,13 +1,17 @@
+{% set version = "1.1.2" %}
+
 package:
   name: amityping
-  version: {{ environ.get("GIT_DESCRIBE_TAG", "0.0.0") }}
+  version: {{ version }}
 
 source:
   git_url: https://github.com/slac-lcls/amityping.git
+  git_tag: v{{ version }}
 
 build:
   noarch: python
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  script: $PYTHON setup.py install  --single-version-externally-managed --record=record.txt
 
 requirements:
   build:

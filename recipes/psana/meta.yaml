@@ -11,8 +11,9 @@ build:
 requirements:
   build:
     - cmake
-    - {{ compiler('c') }}   # [osx]
-    - {{ compiler('cxx') }} # [osx]
+    - make
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
 
   host:
     - python
