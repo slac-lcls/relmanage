@@ -1,5 +1,5 @@
 channels:
-  - /reg/neh/home/valmar/conda-bld
+  - lcls-ii
   - conda-forge
   - defaults
 dependencies:
