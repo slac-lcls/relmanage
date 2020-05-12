@@ -3,5 +3,6 @@ CONDA_BUILD_SYSROOT:
 SDKROOT:
   - /opt/MacOSX10.9.sdk        # [osx]
 
+boost: 1.70
 pin_run_as_build:
   boost: x.x
