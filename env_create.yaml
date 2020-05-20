@@ -53,7 +53,7 @@ dependencies:
   - prometheus_client
   - amityping
   - mypy
-  - rogue-ne
+  - rogue-ne=v4.9.0
   - bluesky
   - ophyd
   - lcls2_timetool
@@ -61,3 +61,4 @@ dependencies:
   - cameralink-gateway
   - pyabel  # for tmo pop algorithm
   - scikit-learn # for tmo pop algorithm
+  - git
