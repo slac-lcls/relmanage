@@ -25,27 +25,12 @@ if [[ -n $env_grep ]]; then
 fi
 
 
-# update user
-echo "BUILDING NEW CONDA ENV $CONDA_ENV"
-
-
-# create new conda environment (things specific to the particular compute
-# environment are kept in `base`)
-conda create -y -n $CONDA_ENV --clone $CONDA_BASE
-# activate the new environment (this way we do not need to do `conda init
-# <shell name>`, as this is not compatible with all compute environments ...
-# cough... nersc ... cough...)
-source activate $CONDA_ENV
+# SKIP: update conda - we'll create a new env which should pull in new stuffs
+#conda update -c conda-forge --all
 
 # add channels strictly in this order
 for (( i=0; i<${#CONDA_CH[@]}; ++i )); do
     conda config --add channels ${CONDA_CH[$i]}
 done
-
-## install pip packages
-pkg_data_dir=$(readlink -f $(dirname ${BASH_SOURCE[0]}))/pkg_data
-echo "ADDING PIP PACKAGES TO CONDA ENV $CONDA_ENV"
-## pip install ${PIP_PKG[@]}
-pip install -r $pkg_data_dir/$PIP
 
 echo ""
