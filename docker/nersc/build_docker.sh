@@ -19,7 +19,7 @@ project_root=$(readlink -f $(dirname ${BASH_SOURCE[0]}))
 
 
 docker build                                \
-    -t slaclcls/lcls-py3:latest                  \
+    -t slaclcls/lcls-py2:latest             \
     -f $project_root/docker/Dockerfile.base \
-    --no-cache  \
+    --no-cache                              \
     $project_root 
