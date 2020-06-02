@@ -26,7 +26,7 @@ fi
 
 
 # SKIP: update conda - we'll create a new env which should pull in new stuffs
-#conda update -c conda-forge --all
+conda update -c conda-forge --all
 
 # add channels strictly in this order
 for (( i=0; i<${#CONDA_CH[@]}; ++i )); do
