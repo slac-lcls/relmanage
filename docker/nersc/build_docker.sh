@@ -22,4 +22,6 @@ docker build                                \
     -t slaclcls/lcls-py2:latest             \
     -f $project_root/docker/Dockerfile.base \
     --no-cache                              \
+    --build-arg PYVER=2.7                   \
+    --build-arg PSANA_VERSION=psana-conda   \
     $project_root 

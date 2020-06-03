@@ -7,6 +7,7 @@ export CONDA_BASE="base"
 export CONDA_CH=(
     "conda-forge"
     "lcls-i"
+    "lcls-ii"
 )
 
 export PIP="pip.txt"

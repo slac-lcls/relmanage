@@ -15,5 +15,3 @@ if [[ -e $(readlink -f $(dirname ${BASH_SOURCE[0]}))/../../conda.local/env.sh ]]
 fi
 
 
-# Python version
-export PYVER=$(python -c "import sys; print(str(sys.version_info.major)+'.'+str(sys.version_info.minor))")

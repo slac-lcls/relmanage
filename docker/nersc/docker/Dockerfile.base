@@ -4,6 +4,18 @@ LABEL maintainer="Johannes Blaschke <jpblaschke@lbl.gov>"
 # adapted from Rollin Thomas <rcthomas@lbl.gov>
 # and Kelly Rowland <kellyrowland@lbl.gov>
 
+
+#-------------------------------------------------------------------------------
+# BUILD ARGS
+#
+# Optional args for building psana1 (python 2/3) and 2
+#
+
+ARG PYVER=3.7
+ARG PSANA_VERSION=psana
+
+
+#-------------------------------------------------------------------------------
 # Base Ubuntu packages
 
 ENV DEBIAN_FRONTEND noninteractive
