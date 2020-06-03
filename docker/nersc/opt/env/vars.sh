@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export CONDA_ENV="lcls2_base"
+export CONDA_ENV="psana_base"
 
 export CONDA_BASE="base"
 

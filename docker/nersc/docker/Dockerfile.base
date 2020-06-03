@@ -12,7 +12,8 @@ LABEL maintainer="Johannes Blaschke <jpblaschke@lbl.gov>"
 #
 
 ARG PYVER=3.7
-ARG PSANA_VERSION=psana
+ARG PSANA_PKG_NAME=""
+ARG PSANA_VERSION=""
 
 
 #-------------------------------------------------------------------------------

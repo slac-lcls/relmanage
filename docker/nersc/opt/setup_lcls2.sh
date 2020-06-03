@@ -9,7 +9,7 @@ source $(readlink -f $(dirname ${BASH_SOURCE[0]}))/env/env.sh
 # to force remove it later). The correct mpich gets picked up
 # from LD_LIBRARY_PATH=/opt/udiImage/modules/mpich/lib64 when
 # shifter images are pulled at Nersc.
-conda create --name $CONDA_ENV python=$PYVER mpich=3.3.2 $PSANA_VERSION
+conda create --name $CONDA_ENV python=$PYVER mpich=3.3.2 $PSANA_PKG_NAME=$PSANA_VERSION
 
 # remove mpi (mpich or openmpi) with --force to leave mpi4py inplace
 # this makes sure that mpi4py is compatible with mpich
