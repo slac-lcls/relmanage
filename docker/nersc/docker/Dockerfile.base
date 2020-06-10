@@ -41,7 +41,8 @@ RUN \
         g++                                                                    \
         make                                                                   \
         gfortran                                                               \
-        tar
+        tar                                                                    \
+        strace
 
 # Timezone to Berkeley
 
