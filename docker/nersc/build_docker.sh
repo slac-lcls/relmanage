@@ -23,7 +23,8 @@ git submodule update --init
 
 # use absolute paths:
 project_root=$(readlink -f $(dirname ${BASH_SOURCE[0]}))
-
+# if `readlink -f` is not available on your machine,
+# `brew install coreutils` then use `greadlink -f`
 
 # set parameters for different build
 case "$PSANA_BUILD" in

@@ -1,5 +1,5 @@
 
-FROM slaclcls/lcls-py2
+FROM slaclcls/lcls-py2:ana-2.0.6
 LABEL maintainer="Chuck Yoon <yoon82@stanford.edu>"
 
 #-------------------------------------------------------------------------------
