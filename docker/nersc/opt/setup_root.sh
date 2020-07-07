@@ -15,29 +15,21 @@ apt-get --yes install python3-opengl
 
 
 # create a new env so that all the dependencies are not tied to 
-# the base environment. We also need to install mpich here (just
-# to force remove it later). The correct mpich gets picked up
-# from LD_LIBRARY_PATH=/opt/udiImage/modules/mpich/lib64 when
-# shifter images are pulled at Nersc.
-pushd /img
-    wget -O extras.yaml $EXTRA_YAML
-    sed -i '/python=/d' extras.yaml
-    sed -i '/psana/d' extras.yaml
-    echo "  - mpich=3.3.2" >> extras.yaml
-    echo "  - $PSANA_PKG_NAME=$PSANA_VERSION" >> extras.yaml
-popd
-conda env create --name $CONDA_ENV python=$PYVER --file /img/extras.yaml
-rm /img/extras.yaml
+# the base environment. 
+conda env create --name $CONDA_ENV --file /img/opt/root.yaml
 
 
 source activate $CONDA_ENV
 
 
+# install psana
+conda install -y mpich=3.3.2 psana-conda=2.0.9 ipython numpy scipy cython matplotlib pandas pillow pyqt  pyqtgraph requests numba
+
+
 # install experiment db (to support psana1)
-conda install psana-expdb -c lcls-rhel7
+conda install -y psana-expdb -c lcls-rhel7
 
 
 # remove mpi (mpich or openmpi) with --force to leave mpi4py inplace
 # this makes sure that mpi4py is compatible with mpich
 conda uninstall -y --force mpich
-

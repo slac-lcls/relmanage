@@ -34,6 +34,7 @@ case "$PSANA_BUILD" in
         PSANA_VERSION_PREFIX="ps"
         PSANA_VERSION=3.0.1
         PYVER=3.7
+        EXTRA_YAML="https://raw.githubusercontent.com/slac-lcls/relmanage/master/env_create.yaml"
         ;;
 
     1-py2)
@@ -42,6 +43,7 @@ case "$PSANA_BUILD" in
         PSANA_VERSION_PREFIX="ana"
         PSANA_VERSION=2.0.6
         PYVER=2.7
+        EXTRA_YAML="https://raw.githubusercontent.com/slaclab/anarel-manage/py3/jenkins/ana-env-py2.yaml"
         ;;
 
     1-py3)
@@ -50,6 +52,7 @@ case "$PSANA_BUILD" in
         PSANA_VERSION_PREFIX="ana"
         PSANA_VERSION=2.0.6
         PYVER=3.7
+        EXTRA_YAML="https://raw.githubusercontent.com/slaclab/anarel-manage/py3/jenkins/ana-env-py3.yaml"
         ;;
     
     *)
@@ -60,13 +63,16 @@ esac
 echo "build    : $PSANA_REPO"
 echo "conda pkg: $PSANA_PKG_NAME"
 echo "version  : $PSANA_VERSION_PREFIX-$PSANA_VERSION"
+echo "yaml     : $EXTRA_YAML"
 
-docker build                                    \
-    -t ${PSANA_REPO}:latest                    \
-    -t ${PSANA_REPO}:$PSANA_VERSION_PREFIX-$PSANA_VERSION         \
-    -f $project_root/docker/Dockerfile.base     \
-    --no-cache                                  \
-    --build-arg PYVER=$PYVER                       \
-    --build-arg PSANA_PKG_NAME=$PSANA_PKG_NAME  \
-    --build-arg PSANA_VERSION=$PSANA_VERSION    \
+docker build                                                    \
+    -t ${PSANA_REPO}:latest                                     \
+    -t ${PSANA_REPO}:test                                       \
+    -t ${PSANA_REPO}:$PSANA_VERSION_PREFIX-$PSANA_VERSION       \
+    -f $project_root/docker/Dockerfile.base                     \
+    --no-cache                                                  \
+    --build-arg PYVER=$PYVER                                    \
+    --build-arg PSANA_PKG_NAME=$PSANA_PKG_NAME                  \
+    --build-arg PSANA_VERSION=$PSANA_VERSION                    \
+    --build-arg EXTRA_YAML=$EXTRA_YAML                          \
     $project_root 
