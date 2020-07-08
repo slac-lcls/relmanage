@@ -18,10 +18,11 @@ requirements:
     - python
     - dill
     - pyzmq
-    - pyqtgraph>=0.11.0rc0
+    - pyqtgraph
     - networkfox
     - psana
     - ipython
+    - pint
     - qtpy
     - asyncqt
     - amityping>=1.1.3

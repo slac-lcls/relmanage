@@ -1,6 +1,6 @@
 #{% set version = "1.4.2" %}
-#{% set version = "1.10.0" %}
-{% set version = "1.7.1" %}
+{% set version = "1.10.1" %}
+#{% set version = "1.7.1" %}
 
 package:
   name: libfabric
