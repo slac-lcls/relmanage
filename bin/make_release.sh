@@ -2,6 +2,7 @@
 # NOTE: Run this under the same shell ("source ...") to avoid misplacing
 # the new environment created in this script.  We don't understand why
 # running it in a different shell with "#!/bin/bash" doesn't work
+# (perhaps because we don't have psconda.sh in psrel's .bashrc?)
 # - mona and cpo
 
 set -e
@@ -40,7 +41,7 @@ if [ -z "$version" ]; then echo $helps; return; fi
 
 IFS=',' read -ra pkgs <<< "$target"
 pyver="3.7"
-reldir="/reg/g/psdm/sw/conda2/manage/recipes/"
+reldir="/reg/g/psdm/sw/conda2/manage/recipes"
 
 echo "Build $target and upload to $channel for release: $version"
 

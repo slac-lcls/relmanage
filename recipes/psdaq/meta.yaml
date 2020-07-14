@@ -35,7 +35,7 @@ requirements:
     - xtcdata
     - psalg
     - python
-    - libfabric 
+    - libfabric=1.7.1
     - rapidjson
     - readline
     - transitions
