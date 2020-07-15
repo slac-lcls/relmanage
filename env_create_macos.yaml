@@ -5,6 +5,7 @@ channels:
   - conda-forge
 dependencies:
   - python=PYTHONVER
+  - setuptools=46.4.0 # bug in newer setuptools with --inplace?
   - cmake
   - numpy
   - mpi
