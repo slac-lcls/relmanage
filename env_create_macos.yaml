@@ -33,3 +33,4 @@ dependencies:
   - llvm-openmp
   - h5py
   - krtc
+  - prometheus_client # psana
