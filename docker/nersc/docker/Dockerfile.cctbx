@@ -1,0 +1,34 @@
+FROM slaclcls/lcls-py2:ana-2.0.6
+LABEL maintainer="mona <monarin@slac.stanford.edu>"
+
+
+#-------------------------------------------------------------------------------
+# Install cctbx in psana conda environment
+#
+
+RUN mkdir -p /img/opt
+COPY opt/setup_cctbx.sh /img/opt/
+
+# Install cctbx  
+RUN cd /img/opt/                                                            && \
+    ./setup_cctbx.sh
+
+
+#-------------------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------------------
+# Remove mpich
+#
+
+RUN mkdir -p /img/opt
+COPY opt/remove_mpich.sh /img/opt/
+
+# always remove mpich at the end  
+RUN cd /img/opt/                                                            && \
+    ./remove_mpich.sh
+
+
+#-------------------------------------------------------------------------------
+
+
