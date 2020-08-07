@@ -2,6 +2,8 @@ channels:
   - lcls-ii
   - conda-forge
   - defaults
+  - tidair-tag # rogue
+  - tidair-packages # pcas for rogue
 dependencies:
   - python=PYTHONVER
   - setuptools=46.4.0 # bug in newer setuptools with --inplace?
@@ -56,7 +58,7 @@ dependencies:
   - prometheus_client
   - amityping
   - mypy
-  - rogue-ne=v4.9.0
+  - rogue
   - bluesky
   - ophyd
   - lcls2_timetool

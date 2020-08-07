@@ -44,7 +44,7 @@ requirements:
     - prometheus_client
     - amityping
     - mypy
-    - rogue-ne
+    - rogue
     - bluesky
     - ophyd
     - p4p

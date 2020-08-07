@@ -1,19 +1,17 @@
 # cpo modified this recipe from the default recipe in
 # anaconda.org/tidair-tag:
-# - remove epics/pyepics from build/run dependencies
+# - remove epics/pyepics/pydm/pcas from build/run dependencies
 # - change pkg name to rogue-ne
 
-package: 
+package:
   name: rogue-ne
-
   version: {{ environ.get('GIT_DESCRIBE_TAG') }}
 
 source:
-   git_url: https://github.com/slaclab/rogue.git
-   git_rev: pre-release
+  git_url: https://github.com/slaclab/rogue.git
 
 build:
-   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+   number: {{ environ.get('GIT_DESCRIBE_NUMBER',0) }}
 
 requirements:
    build:
@@ -24,20 +22,19 @@ requirements:
      - git
      - cmake
      - make
+     - bzip2
+     - zeromq
      - numpy
    host:
      - python
      - boost
-     - boost-cpp
      - bzip2
      - zeromq
      - numpy
    run:
      - python
+     - {{ pin_compatible('boost', min_pin='x.x', max_pin='x.x')}}
      - boost
-     - boost-cpp
-     - cmake
-     - make
      - bzip2
      - zeromq
      - numpy
