@@ -28,7 +28,7 @@ dependencies:
   - htop
   - asyncqt # ami
   - setproctitle # ami
-  - pyarrow # ami
+  - pyarrow=0.16.0 # ami
   - networkfox # ami
   - pint # ami
   - pyzmq
@@ -58,7 +58,7 @@ dependencies:
   - prometheus_client
   - amityping
   - mypy
-  - rogue
+  - rogue=v5.2.3 # sometimes it will revert to old version (because of arrow?)
   - bluesky
   - ophyd
   - lcls2_timetool
