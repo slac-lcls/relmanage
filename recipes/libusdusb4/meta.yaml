@@ -1,5 +1,5 @@
 {% set version = "1.0.0" %} 
-{% set build = "1" %}
+{% set build = "2" %}
 
 package:
   name: libusdusb4
@@ -10,6 +10,10 @@ source:
 
 build:
   number: {{build}}
+
+requirements:
+  run:
+    - libusb
 
 about:
   summary: "This is a shared library blob that is provided by US Digital for the USB4 encoder box"
