@@ -19,6 +19,7 @@ requirements:
     - {{ cdt('libnl') }}
     - {{ cdt('librdmacm') }}
     - {{ cdt('librdmacm-devel') }}
+    - {{ cdt('libudev') }}
   host:
     - xtcdata
     - psalg
@@ -31,6 +32,7 @@ requirements:
     - zeromq
     - p4p
     - zlib
+    - usdusb4
   run:
     - xtcdata
     - psalg
@@ -53,3 +55,4 @@ requirements:
     - cameralink-gateway
     - epics-base >=7
     - zlib
+    - usdusb4
