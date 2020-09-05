@@ -36,3 +36,4 @@ requirements:
     - sympy
     - htop # optional: for memory leak debugging
     - setproctitle
+    - pyfftw

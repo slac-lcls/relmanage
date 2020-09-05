@@ -11,11 +11,11 @@ package:
   version: '{{ environ.get("GIT_DESCRIBE_TAG", "0.0.0") }}'
 
 source:
-  git_url: https://github.com/slaclab/cameralink-gateway.git
+  git_url: https://github.com/slaclab/lcls2-timetool.git
 
 build:
   noarch: python
-  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 1) }}
   script: git submodule update --init --recursive; cd firmware/common/python; $PYTHON setup.py install  --single-version-externally-managed --record=record.txt
   script: cd firmware/common/python; $PYTHON setup.py install --single-version-externally-managed --record=record.txt
 
