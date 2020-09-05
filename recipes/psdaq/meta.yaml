@@ -32,7 +32,7 @@ requirements:
     - zeromq
     - p4p
     - zlib
-    - usdusb4
+    - libusdusb4
   run:
     - xtcdata
     - psalg
@@ -55,4 +55,4 @@ requirements:
     - cameralink-gateway
     - epics-base >=7
     - zlib
-    - usdusb4
+    - libusdusb4
