@@ -65,6 +65,7 @@ dependencies:
   - wave8
   - cameralink-gateway
   - libusdusb4
+  - libudev-devel-cos6-x86_64 # for libusdusb
   - pyabel  # for tmo pop algorithm
   - scikit-learn # for tmo pop algorithm
   - git
