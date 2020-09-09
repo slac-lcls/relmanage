@@ -23,14 +23,14 @@ requirements:
     - {{ cdt('libuuid') }}
     - {{ cdt('libuuid-devel') }}
   host:
-    - libnl
+    - libnl=1.1.4=hf484d3e_0 # to force lcls-ii channel, avoid libnl 3.2.25 from conda-forge
 #    - libnl3
     - rdma-core
 #    - infinipath-psm
 #    - libpsm2
   run:
-    - libnl
-#    - libn3
+    - libnl=1.1.4=hf484d3e_0 # to force lcls-ii channel, avoid libnl 3.2.25 from conda-forge
+#    - libnl3
     - rdma-core
 #    - infinipath-psm
 #    - libpsm2

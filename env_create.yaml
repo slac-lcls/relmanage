@@ -49,6 +49,7 @@ dependencies:
   - pytest-asyncio # ami
   - p4p      # daq packages
   - libfabric
+  - libnl=1.1.4=hf484d3e_0 # to force lcls-ii channel, avoid libnl 3.2.25 from conda-forge
   - rapidjson
   - transitions
   - ipython
