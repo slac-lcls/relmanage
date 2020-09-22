@@ -55,7 +55,8 @@ do
 done
 
 echo "Create new default environment $version"
-conda create -y --name $version python=$pyver psdaq ami
+#conda create -y --name $version python=$pyver psdaq ami
+conda env create --name $version --file /reg/g/psdm/sw/conda2/manage/prod_create.yaml
 
 echo "Removing make release log files"
 rm .make_release_log*

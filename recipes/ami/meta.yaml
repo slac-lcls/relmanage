@@ -35,5 +35,6 @@ requirements:
     - pytest-asyncio # optional: for test
     - sympy
     - htop # optional: for memory leak debugging
+    - pygraphviz # optional: for debugging
     - setproctitle
     - pyfftw

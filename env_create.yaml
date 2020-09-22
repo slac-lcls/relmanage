@@ -42,7 +42,7 @@ dependencies:
   - scikit-learn # xtcav and tmo pop alg
   - numba    # ami
   - pydot    # ami
-  - graphviz # ami
+  - pygraphviz # ami
   - qtpy     # ami
   - sympy    # ami
   - pytest-qt # ami testing
@@ -59,7 +59,7 @@ dependencies:
   - prometheus_client
   - amityping
   - mypy
-  - rogue=v5.2.3 # sometimes it will revert to old version (because of arrow?)
+  - rogue>=v5.4.0 # sometimes it will revert to old version (because of arrow?)
   - bluesky
   - ophyd
   - lcls2_timetool

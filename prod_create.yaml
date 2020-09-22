@@ -1,0 +1,12 @@
+channels:
+  - lcls-ii
+  - conda-forge
+  - defaults
+  - tidair-tag # rogue
+  - tidair-packages # pcas for rogue
+dependencies:
+  - python=3.7
+  - psdaq
+  - ami
+  - ipywidgets
+  - ipympl
