@@ -5,5 +5,10 @@ SDKROOT:
 
 python: 3.7
 boost: 1.70
+c_compiler_version:
+  - 7
+cxx_compiler_version:
+  - 7
+cdt_name: cos6
 pin_run_as_build:
   boost: x.x

@@ -20,6 +20,7 @@ requirements:
     - {{ cdt('librdmacm') }}
     - {{ cdt('librdmacm-devel') }}
     - {{ cdt('libudev') }}
+    - {{ cdt('libudev-devel') }}
   host:
     - xtcdata
     - psalg
@@ -29,7 +30,7 @@ requirements:
     - prometheus-cpp
     - rapidjson
     - readline
-    - zeromq
+    - zeromq=4.3.2 # workaround cmake file not found
     - p4p
     - zlib
     - libusdusb4
@@ -42,7 +43,7 @@ requirements:
     - readline
     - transitions
     - requests
-    - zeromq
+    - zeromq=4.3.2 # workaround cmake file not found
     - prometheus_client
     - amityping
     - mypy

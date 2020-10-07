@@ -17,6 +17,9 @@ fi
 target="xtcdata,psalg,psana,psdaq,ami" # default packages
 channel="lcls-ii" # default channel
 
+# to pick up conda_build_config.yaml
+cd /reg/g/psdm/sw/conda2/manage/recipes
+
 while getopts "ht:c:" opt; do
     case ${opt} in
         h ) echo $helps
