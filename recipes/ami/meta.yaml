@@ -38,3 +38,4 @@ requirements:
     - pygraphviz # optional: for debugging
     - setproctitle
     - pyfftw
+    - pyqode.python

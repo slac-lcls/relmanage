@@ -30,7 +30,7 @@ requirements:
     - prometheus-cpp
     - rapidjson
     - readline
-    - zeromq=4.3.2 # workaround cmake file not found
+    - zeromq=4.3.2=he1b5a44_3 # workaround cmake file not found
     - p4p
     - zlib
     - libusdusb4
@@ -43,7 +43,7 @@ requirements:
     - readline
     - transitions
     - requests
-    - zeromq=4.3.2 # workaround cmake file not found
+    - zeromq=4.3.2=he1b5a44_3 # workaround cmake file not found
     - prometheus_client
     - amityping
     - mypy
