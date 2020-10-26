@@ -32,7 +32,7 @@ case "$PSANA_BUILD" in
         PSANA_REPO="slaclcls/lcls2"
         PSANA_PKG_NAME="psana"
         PSANA_VERSION_PREFIX="ps"
-        PSANA_VERSION=3.0.1
+        PSANA_VERSION=3.1.15
         PYVER=3.7
         EXTRA_YAML="https://raw.githubusercontent.com/slac-lcls/relmanage/master/env_create.yaml"
         ;;

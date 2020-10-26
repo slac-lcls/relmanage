@@ -21,6 +21,7 @@ apt-get --yes install python3-opengl
 # shifter images are pulled at Nersc.
 pushd /img
     wget -O extras.yaml $EXTRA_YAML
+    sed -i '/file:/d' extras.yaml
     sed -i '/python=/d' extras.yaml
     sed -i '/psana/d' extras.yaml
     echo "  - mpich=3.3.2" >> extras.yaml
