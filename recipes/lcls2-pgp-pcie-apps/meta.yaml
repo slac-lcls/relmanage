@@ -1,0 +1,27 @@
+# there is an issue with this: conda build does "git-clone --recursive"
+# but that fails, because the .gitmodules file doesn't use the "https:"
+# form for the submodules, it uses the "git@" form, and the psrel
+# account doesn't have permissions (or even a github account).  and
+# even the "https:" version seems to prompt for a password when run
+# as psrel.  for now I'm working around this by doing conda-build as
+# a user with read permission, not psrel. -cpo
+
+package:
+  name: lcls2-pgp-pcie-apps
+  version: '{{ environ.get("GIT_DESCRIBE_TAG", "0.0.0") }}'
+
+source:
+  git_url: git@github.com:slaclab/lcls2-pgp-pcie-apps.git
+  git_rev: psdaq_conda
+
+build:
+  noarch: python
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  script: git submodule update --recursive; cd firmware/python; ${PYTHON} setup.py install  --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - git
+    - python
+  run:
+    - python

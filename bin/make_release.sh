@@ -18,7 +18,7 @@ target="xtcdata,psalg,psana,psdaq,ami" # default packages
 channel="lcls-ii" # default channel
 
 # to pick up conda_build_config.yaml
-cd /reg/g/psdm/sw/conda2/manage/recipes
+cd /cds/sw/ds/ana/conda2/manage/recipes
 
 while getopts "ht:c:" opt; do
     case ${opt} in
@@ -44,7 +44,7 @@ if [ -z "$version" ]; then echo $helps; return; fi
 
 IFS=',' read -ra pkgs <<< "$target"
 pyver="3.7"
-reldir="/reg/g/psdm/sw/conda2/manage/recipes"
+reldir="/cds/sw/ds/ana/conda2/manage/recipes"
 
 echo "Build $target and upload to $channel for release: $version"
 
@@ -54,12 +54,12 @@ do
     conda build ${reldir}/$pkg --python $pyver > .make_release_log$pkg
     pkg_path=`grep "anaconda upload" .make_release_log$pkg | awk '{ print $3 }'`
     echo "Uploading $pkg_path to $channel channel"
-    anaconda upload -u $channel $pkg_path
+    anaconda upload --force -u $channel $pkg_path
 done
 
 echo "Create new default environment $version"
 #conda create -y --name $version python=$pyver psdaq ami
-conda env create --name $version --file /reg/g/psdm/sw/conda2/manage/prod_create.yaml
+conda env create --name $version --file /cds/sw/ds/ana/conda2/manage/prod_create.yaml
 
 echo "Removing make release log files"
 rm .make_release_log*
