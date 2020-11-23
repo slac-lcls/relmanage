@@ -73,3 +73,4 @@ dependencies:
   - pyabel  # for tmo pop algorithm
   - scikit-learn # for tmo pop algorithm
   - git-lfs
+  - git

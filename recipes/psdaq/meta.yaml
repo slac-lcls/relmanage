@@ -57,3 +57,4 @@ requirements:
     - epics-base >=7
     - zlib
     - libusdusb4
+    - git
