@@ -33,7 +33,7 @@ dependencies:
   - pint # ami
   - pyqode.python # ami
   - pyzmq
-  - zeromq=4.3.2=he1b5a44_3 # workaround cmake file not found
+  - zeromq
   - pyqt
   - pyqtgraph
   - epics-base
