@@ -74,3 +74,4 @@ dependencies:
   - scikit-learn # for tmo pop algorithm
   - git-lfs
   - git
+  - lcls2-pgp-pcie-apps
