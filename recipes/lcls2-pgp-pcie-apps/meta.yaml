@@ -12,7 +12,7 @@ package:
 
 source:
   git_url: git@github.com:slaclab/lcls2-pgp-pcie-apps.git
-  git_rev: psdaq_conda
+  git_rev: v1.3.1
 
 build:
   noarch: python

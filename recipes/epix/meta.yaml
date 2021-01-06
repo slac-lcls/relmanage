@@ -12,7 +12,7 @@ package:
 
 source:
   git_url: git@github.com:slaclab/epix.git
-  git_rev: epix-l2sidaq-python
+  git_rev: epix-l2sidaq
 
 build:
   noarch: python
