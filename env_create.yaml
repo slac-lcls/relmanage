@@ -66,6 +66,7 @@ dependencies:
   - cameralink-gateway
   - epix
   - libusdusb4
+  - libusb # for libusdusb
   - libudev-devel-cos6-x86_64 # for libusdusb
   - pyabel  # for tmo pop algorithm
   - scikit-learn # for tmo pop algorithm
