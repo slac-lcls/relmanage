@@ -1,5 +1,5 @@
 channels:
-  - valmar
+  - lcls-ii
   - conda-forge
   - defaults
   - tidair-packages # pcas for rogue
@@ -63,7 +63,6 @@ dependencies:
   - bluesky
   - ophyd
   - lcls2_timetool
-  - wave8
   - cameralink-gateway
   - epix
   - libusdusb4

@@ -1,5 +1,5 @@
 channels:
-  - valmar
+  - lcls-ii
   - conda-forge
   - defaults
   - tidair-packages # pcas for rogue
