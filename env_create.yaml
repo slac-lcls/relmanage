@@ -1,19 +1,17 @@
 channels:
-  - lcls-ii
+  - valmar
   - conda-forge
   - defaults
-  - tidair-tag # rogue
   - tidair-packages # pcas for rogue
 dependencies:
-  - python=PYTHONVER
-  - setuptools=46.4.0 # bug in newer setuptools with --inplace?
+  - python=3.7
+  - setuptools 
   - cmake
   - make
   - gcc_linux-64
   - gxx_linux-64
   - numpy
   - mpi4py   # psana packages (legion is optional)
-  - legion
   - cython
   - matplotlib
   - pytest
@@ -22,13 +20,13 @@ dependencies:
   - curl
   - mypy_extensions
   - psmon
-  - h5py>=2.10 # needed by small-h5 writer
+  - h5py  # needed by small-h5 writer
   - krtc
   - roentdek
   - htop
   - asyncqt # ami
   - setproctitle # ami
-  - pyarrow=0.16.0 # ami
+  - pyarrow # ami
   - networkfox # ami
   - pint # ami
   - pyqode.python # ami
@@ -51,7 +49,7 @@ dependencies:
   - pytest-asyncio # ami
   - p4p      # daq packages
   - libfabric
-  - libnl=1.1.4=hf484d3e_0 # to force lcls-ii channel, avoid libnl 3.2.25 from conda-forge
+  - libnl
   - rapidjson
   - transitions
   - ipython
@@ -61,13 +59,13 @@ dependencies:
   - prometheus_client
   - amityping
   - mypy
-  - rogue>=v5.4.0 # sometimes it will revert to old version (because of arrow?)
+  - rogue=v5.4.0 
   - bluesky
   - ophyd
   - lcls2_timetool
   - wave8
   - cameralink-gateway
-  - epix-l2sidaq
+  - epix
   - libusdusb4
   - libudev-devel-cos6-x86_64 # for libusdusb
   - pyabel  # for tmo pop algorithm

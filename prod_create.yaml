@@ -1,9 +1,7 @@
 channels:
-  - file:///cds/sw/ds/ana/conda2/channels/local-lcls-ii
-  - lcls-ii
+  - valmar
   - conda-forge
   - defaults
-  - tidair-tag # rogue
   - tidair-packages # pcas for rogue
 dependencies:
   - python=3.7
