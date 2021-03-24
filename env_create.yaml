@@ -34,7 +34,7 @@ dependencies:
   - zeromq
   - pyqt
   - pyqtgraph
-  - epics-base
+  - epics-base=7.0.4
   - readline
   - dill
   - flake8
