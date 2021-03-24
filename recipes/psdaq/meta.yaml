@@ -47,7 +47,7 @@ requirements:
     - prometheus_client
     - amityping
     - mypy
-    - rogue>=v5.4.0 # sometimes it will revert to old version (because of arrow?)
+    - rogue=v5.4.0 # sometimes it will revert to old version (because of arrow?)
     - bluesky
     - ophyd
     - p4p
