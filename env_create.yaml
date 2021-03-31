@@ -29,6 +29,7 @@ dependencies:
   - pyarrow # ami
   - networkfox # ami
   - pint # ami
+  - pyfftw # ami
   - pyqode.python # ami
   - pyzmq
   - zeromq
