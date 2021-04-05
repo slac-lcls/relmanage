@@ -9,3 +9,4 @@ dependencies:
   - ami
   - ipywidgets
   - ipympl
+  - jedi=0.17.2

@@ -52,6 +52,7 @@ dependencies:
   - libfabric
   - libnl
   - rapidjson
+  - jedi=0.17.2
   - transitions
   - ipython
   - requests
