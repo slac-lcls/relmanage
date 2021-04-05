@@ -22,6 +22,7 @@ requirements:
     - networkfox
     - psana
     - ipython
+    - qtconsole
     - pint
     - qtpy
     - asyncqt
