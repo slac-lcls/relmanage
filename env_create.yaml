@@ -49,7 +49,6 @@ dependencies:
   - pytest-qt # ami testing
   - pytest-asyncio # ami
   - qtconsole # ami
-  - jmespath # ami
   - p4p      # daq packages
   - libfabric
   - libnl
