@@ -1,8 +1,8 @@
 channels:
   - lcls-ii
+  - tidair-packages # pcas for rogue
   - conda-forge
   - defaults
-  - tidair-packages # pcas for rogue
 dependencies:
   - python=3.7
   - setuptools 
@@ -35,7 +35,7 @@ dependencies:
   - zeromq
   - pyqt
   - pyqtgraph
-  - epics-base=7.0.4
+  - epics-base
   - readline
   - dill
   - flake8
@@ -62,7 +62,7 @@ dependencies:
   - prometheus_client
   - amityping
   - mypy
-  - rogue=v5.4.0 
+  - rogue
   - bluesky
   - ophyd
   - lcls2_timetool
@@ -76,3 +76,6 @@ dependencies:
   - git-lfs
   - git
   - lcls2-pgp-pcie-apps
+  - caproto
+  - scikit-image
+  - pytables

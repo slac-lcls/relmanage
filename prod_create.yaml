@@ -10,3 +10,6 @@ dependencies:
   - ipywidgets
   - ipympl
   - jedi=0.17.2
+  - caproto
+  - scikit-image
+  - pytables

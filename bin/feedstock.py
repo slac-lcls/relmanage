@@ -87,7 +87,7 @@ parser.add_argument("--incbuildnum", action='store_true', help="increment build 
 parser.add_argument("--cmd", help="command to perform in all directories")
 args = parser.parse_args()
 
-if args.wave:
+if args.wave is not None:
     selected_repos=build_waves[args.wave]
 else:
     selected_repos=all_repos
