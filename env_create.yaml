@@ -68,6 +68,7 @@ dependencies:
   - lcls2_timetool
   - cameralink-gateway
   - epix
+  - posix_ipc
   - libusdusb4
   - libusb # for libusdusb
   - libudev-devel-cos6-x86_64 # for libusdusb
