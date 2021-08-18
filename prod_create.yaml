@@ -13,3 +13,5 @@ dependencies:
   - caproto
   - scikit-image
   - pytables
+  - openmpi
+  - mpi4py

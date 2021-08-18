@@ -80,3 +80,4 @@ dependencies:
   - caproto
   - scikit-image
   - pytables
+  - openmpi
