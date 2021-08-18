@@ -1,4 +1,5 @@
 channels:
+  - tidair-tag # pcas for rogue
   - lcls-ii
   - conda-forge
   - defaults

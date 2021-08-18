@@ -1,6 +1,7 @@
 channels:
-  - lcls-ii
+  - tidair-tag # pcas for rogue
   - tidair-packages # pcas for rogue
+  - lcls-ii
   - conda-forge
   - defaults
 dependencies:
