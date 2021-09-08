@@ -8,7 +8,7 @@ import jinja2
 import requests
 import rich
 
-GITHUB_ACCESS_TOKEN: str = os.environ(GITHUB_ACCESS_TOKEN)
+GITHUB_ACCESS_TOKEN: str = os.environ("GITHUB_ACCESS_TOKEN")
 GITHUB_OWNER: str = "slac-lcls"
 
 
