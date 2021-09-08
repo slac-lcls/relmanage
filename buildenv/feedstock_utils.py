@@ -1,4 +1,5 @@
 import datetime
+import os
 import pathlib
 import shutil
 import subprocess
@@ -8,7 +9,10 @@ import jinja2
 import requests
 import rich
 
-GITHUB_ACCESS_TOKEN: str = os.environ("GITHUB_ACCESS_TOKEN")
+try:
+    GITHUB_ACCESS_TOKEN: str = os.environ["GITHUB_ACCESS_TOKEN"]
+except KeyError:
+    raise RuntimeError("GITHUB ACCESS TOKEN environment variable not defined")
 GITHUB_OWNER: str = "slac-lcls"
 
 
