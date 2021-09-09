@@ -82,3 +82,5 @@ dependencies:
   - scikit-image
   - pytables
   - openmpi
+  - lcls2-epix-hr-pcie
+  - epix-hr-single-10k

@@ -16,3 +16,4 @@ dependencies:
   - pytables
   - openmpi
   - mpi4py
+  - rich
