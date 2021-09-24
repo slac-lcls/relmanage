@@ -15,7 +15,6 @@ build_waves = [
 'lcls2_timetool-feedstock',
 'libnl-feedstock',
 'libnl3-feedstock',
-'libusdusb4-feedstock',
 'networkfox-feedstock',
 'prometheus-cpp-feedstock',
 'psmon-feedstock',

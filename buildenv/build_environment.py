@@ -91,7 +91,6 @@ repository_data: List[Dict[str, str]] = [
         ),
         "libnl": "git@github.com:slac-lcls/libnl-feedstock",
         "libnl3": "git@github.com:slac-lcls/libnl3-feedstock",
-        "libusdusb4": "git@github.com:slac-lcls/libusdusb4-feedstock",
         "networkfox": "git@github.com:slac-lcls/networkfox-feedstock",
         "prometheus-cpp": "git@github.com:slac-lcls/prometheus-cpp-feedstock",
         "psmon": "git@github.com:slac-lcls/psmon-feedstock",
