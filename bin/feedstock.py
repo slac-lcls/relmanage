@@ -24,7 +24,7 @@ build_waves = [
 'xtcdata-feedstock',
 ],
 [
-'rmda-core-feedstock',
+'rdma-core-feedstock',
 'psalg-feedstock',
 ],
 [
