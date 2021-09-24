@@ -77,17 +77,17 @@ repository_data: List[Dict[str, str]] = [
     {
         "ami": "git@github.com:slac-lcls/ami-feedstock",
         "amityping": "git@github.com:slac-lcls/amityping-feedstock",
-        "cameralink-feedstock": (
+        "cameralink-gateway": (
             "git@github.com:slac-lcls/cameralink-gateway-feedstock"
         ),
-        "epix-feedstock": "git@github.com:slac-lcls/epix-feedstock",
+        "epix": "git@github.com:slac-lcls/epix-feedstock",
         "lcls2-pgp-pcie-apps": (
             "git@github.com:slac-lcls/lcls2-pgp-pcie-apps-feedstock"
         ),
         "lcls2_timetool": "git@github.com:slac-lcls/lcls2_timetool-feedstock",
         "epix-hr-single-10k": "git@github.com:slac-lcls/epix-hr-single-10k-feedstock",
         "lcls2-epix-hr-pcie": (
-            "git@github.com:slac-lcls/lcls2-epix-hr-pcie-feedstock.git"
+            "git@github.com:slac-lcls/lcls2-epix-hr-pcie-feedstock"
         ),
         "libnl": "git@github.com:slac-lcls/libnl-feedstock",
         "libnl3": "git@github.com:slac-lcls/libnl3-feedstock",
@@ -99,7 +99,7 @@ repository_data: List[Dict[str, str]] = [
         "xtcdata": "git@github.com:slac-lcls/xtcdata-feedstock",
     },
     {
-        "rmda-core": "git@github.com:slac-lcls/rmda-core-feedstock",
+        "rdma-core": "git@github.com:slac-lcls/rdma-core-feedstock",
         "psalg": "git@github.com:slac-lcls/psalg-feedstock",
     },
     {
@@ -123,7 +123,7 @@ repository_data: List[Dict[str, str]] = [
 )
 @click.option(
     "--build-environment",
-    "-g",
+    "-b",
     type=bool,
     default=False,
     is_flag=True,
@@ -147,12 +147,28 @@ repository_data: List[Dict[str, str]] = [
     type=click.Path(exists=True),
     help="Path to a YAML file with the version of the package to generate",
 )
+@click.option(
+    "--start-from-wave",
+    "-w",
+    type=int,
+    default=0,
+    help="Wave to start the pacakge generation from",
+)
+@click.option(
+    "--stop-at-wave",
+    "-s",
+    type=int,
+    default=len(repository_data),
+    help="Wave to stop the pacakge generation at",
+)
 def build_environment(
     generate_packages: bool,
     build_environment: bool,
     environment_name: str,
     environment_file: str,
     package_version_file: str,
+    start_from_wave: int,
+    stop_at_wave: int,
 ) -> None:
 
     if not generate_packages and not build_environment:
@@ -177,6 +193,10 @@ def build_environment(
         wave_index: int
         wave: Dict[str, str]
         for wave_index, wave in enumerate(repository_data):
+            if wave_index < start_from_wave:
+                continue
+            if wave_index > stop_at_wave:
+                continue
             rich.print(f"[bold]Building wave {wave_index}...[/bold]")
             rich.print(f"[bold]Packages in the wave: {tuple(wave.keys())}[/bold]")
             start_time: datetime.datetime = datetime.datetime.now()

@@ -174,8 +174,15 @@ class Repository:
             rich.print(
                 f"[bold]  New build number of package is {new_build_number}[/bold]"
             )
+            url_template: jinja2.Template = jinja2.Template(recipe.get_source_url())
+            full_url: str = str(
+                url_template.render(name=package, version=current_version)
+            )
+            if not full_url.startswith("./"):
+              sha256: str = compute_checksum_of_source_url(full_url)
+              recipe.set_source_checksum(sha256)
             recipe.save_recipe()
-            self.git_add_and_commit("[bold]Bumped build number[/bold]")
+            self.git_add_and_commit("Bumped build number")
         else:
             rich.print("[bold]  Update to new version[/bold]")
             recipe.set_version(requested_version)
@@ -189,8 +196,9 @@ class Repository:
             full_url: str = str(
                 url_template.render(name=package, version=requested_version)
             )
-            sha256: str = compute_checksum_of_source_url(full_url)
-            recipe.set_source_checksum(sha256)
+            if not full_url.startswith("./"):
+              sha256: str = compute_checksum_of_source_url(full_url)
+              recipe.set_source_checksum(sha256)
             recipe.save_recipe()
             self.git_add_and_commit(f"Bumped version to {requested_version}")
 
