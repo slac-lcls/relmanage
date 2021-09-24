@@ -3,6 +3,7 @@ from typing import Dict
 
 import click
 import feedstock_utils
+import rich
 import yaml
 
 
@@ -39,9 +40,9 @@ def prepare_source(package_version_file: str) -> None:
             f"/reg/g/psdm/web/swdoc/tutorials/{package}-"
             f"{version_dict[package]}.tar.gz"
         ).is_file():
-            print(
-                f"File {package}-{version_dict[package]}.tar.gz already"
-                f"exists in /reg/g/psdm/web/swdoc/tutorials/. Skipping..."
+            rich.print(
+                f"[bold]File {package}-{version_dict[package]}.tar.gz already "
+                f"exists in /reg/g/psdm/web/swdoc/tutorials/. Skipping...[/bold]"
             )
             continue
         
