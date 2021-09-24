@@ -35,6 +35,16 @@ def prepare_source(package_version_file: str) -> None:
         if package not in version_dict:
             raise RuntimeError(f"Package {package} not found in version file")
 
+        if pathlib.Path(
+            f"/reg/g/psdm/web/swdoc/tutorials/{package}-"
+            f"{version_dict[package]}.tar.gz"
+        ).is_file():
+            print(
+                f"File {package}-{version_dict[package]}.tar.gz already"
+                f"exists in /reg/g/psdm/web/swdoc/tutorials/. Skipping..."
+            )
+            continue
+        
         repository: feedstock_utils.Repository = feedstock_utils.Repository(
             repository=repository_data[package], debug=False
         )
