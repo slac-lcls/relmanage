@@ -9,13 +9,12 @@ lcls2-epix-hr-pcie: 1.2.0
 libfabric: 1.10.1
 libnl3: 3.2.28
 libnl: 1.1.4
-libusdusb4: 1.0.0
 networkfox: 0.0.8
 prometheus-cpp: 0.9.0
-psalg: 3.3.24
-psana: 3.3.24
-psdaq: 3.3.24
+psalg: 3.3.25
+psana: 3.3.25
+psdaq: 3.3.25
 psmon: 1.0.5
 rdma-core: 13
 roentdek: 0.0.3
-xtcdata: 3.3.24
+xtcdata: 3.3.25
