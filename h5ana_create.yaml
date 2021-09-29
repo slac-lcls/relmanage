@@ -24,3 +24,4 @@ dependencies:
   - scikit-image
   - pytables
   - bokeh
+  - holoviews
