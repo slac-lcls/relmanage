@@ -1,4 +1,4 @@
-ami: 2.4.7
+ami: 2.4.9
 amityping: 1.1.7
 cameralink-gateway: 7.6.2
 epix: 0.0.3
@@ -11,10 +11,10 @@ libnl3: 3.2.28
 libnl: 1.1.4
 networkfox: 0.0.8
 prometheus-cpp: 0.9.0
-psalg: 3.3.25
-psana: 3.3.25
-psdaq: 3.3.25
+psalg: 3.3.28
+psana: 3.3.28
+psdaq: 3.3.28
 psmon: 1.0.5
 rdma-core: 13
 roentdek: 0.0.3
-xtcdata: 3.3.25
+xtcdata: 3.3.28
