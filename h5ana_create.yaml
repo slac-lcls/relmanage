@@ -25,3 +25,4 @@ dependencies:
   - pytables
   - bokeh
   - holoviews
+  - ipympl
