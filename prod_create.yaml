@@ -18,3 +18,5 @@ dependencies:
   - mpi4py
   - rich
   - gdb
+  - holoviews
+  - panel
