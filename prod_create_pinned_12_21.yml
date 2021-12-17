@@ -1,0 +1,22 @@
+channels:
+  - tidair-tag # pcas for rogue
+  - lcls-ii
+  - conda-forge
+  - defaults
+  - tidair-packages # pcas for rogue
+dependencies:
+  - python=3.7
+  - psdaq
+  - ami
+  - ipywidgets=7.6.5
+  - ipympl=0.8.2
+  - jedi=0.17.2
+  - caproto=0.8.1
+  - scikit-image=0.18.3
+  - pytables=3.6.1
+  - openmpi
+  - mpi4py
+  - rich=10.15.1
+  - gdb=11.1
+  - holoviews=1.14.6
+  - panel=0.12.4
