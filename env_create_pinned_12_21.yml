@@ -25,9 +25,9 @@ dependencies:
   - gxx_linux-64=11.2.0
   - h5py=3.6.0
   - holoviews=1.14.6
-  - htop=3.1.2
+  - htop=2.2.0
   - ipdb=0.13.9
-  - ipython=7.30.0
+  - ipython=7.30.1
   - jedi=0.17.2
   - krtc=0.1.4
   - lcls2-epix-hr-pcie

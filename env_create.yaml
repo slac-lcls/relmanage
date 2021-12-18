@@ -24,7 +24,7 @@ dependencies:
   - h5py  # needed by small-h5 writer
   - krtc
   - roentdek
-  - htop
+  - htop < 3
   - asyncqt # ami
   - setproctitle # ami
   - pyarrow # ami
