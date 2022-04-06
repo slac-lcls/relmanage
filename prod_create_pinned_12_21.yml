@@ -20,3 +20,4 @@ dependencies:
   - gdb=11.1
   - holoviews=1.14.6
   - panel=0.12.4
+  - rogue=v5.9.3
