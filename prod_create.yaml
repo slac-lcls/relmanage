@@ -13,6 +13,7 @@ dependencies:
   - jedi=0.17.2
   - caproto
   - scikit-image
+  - scikit-beam
   - pytables
   - openmpi
   - mpi4py

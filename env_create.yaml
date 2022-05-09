@@ -71,12 +71,12 @@ dependencies:
   - epix
   - posix_ipc
   - pyabel  # for tmo pop algorithm
-  - scikit-learn # for tmo pop algorithm
   - git-lfs
   - git
   - lcls2-pgp-pcie-apps
   - caproto
   - scikit-image
+  - scikit-beam
   - pytables
   - openmpi
   - lcls2-epix-hr-pcie
