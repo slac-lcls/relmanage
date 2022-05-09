@@ -21,3 +21,4 @@ dependencies:
   - gdb
   - holoviews
   - panel
+  - scikit-beam
