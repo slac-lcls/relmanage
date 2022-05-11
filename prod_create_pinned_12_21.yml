@@ -22,4 +22,5 @@ dependencies:
   - panel=0.12.4
   - rogue=v5.9.3
   - scikit-beam=0.0.24
+  - seaborn=0.11.2
   

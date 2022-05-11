@@ -22,3 +22,4 @@ dependencies:
   - holoviews
   - panel
   - scikit-beam
+  - seaborn
