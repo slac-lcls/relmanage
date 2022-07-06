@@ -1,12 +1,12 @@
 channels:
-  - tidair-tag # pcas for rogue
   - lcls-ii
   - conda-forge
-  - defaults
+  - tidair-tag # pcas for rogue
   - tidair-packages # pcas for rogue
+  - defaults
 dependencies:
   - python=3.7
-  - psdaq
+  #- psdaq
   - ami
   - ipywidgets
   - ipympl
@@ -23,3 +23,6 @@ dependencies:
   - panel
   - scikit-beam
   - seaborn
+  - p4p
+  - epics-base # make sure that the version matches the version of epicscorelibs
+  - pyepics
