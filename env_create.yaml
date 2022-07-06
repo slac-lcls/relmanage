@@ -63,7 +63,7 @@ dependencies:
   - prometheus_client
   - amityping
   - mypy
-  - rogue
+  - rogue=v5.9.3
   - bluesky
   - ophyd
   - lcls2_timetool
