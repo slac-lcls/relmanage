@@ -26,3 +26,4 @@ dependencies:
   - p4p
   - epics-base # make sure that the version matches the version of epicscorelibs
   - pyepics
+  - xarray
