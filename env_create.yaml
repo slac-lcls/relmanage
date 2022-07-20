@@ -70,6 +70,7 @@ dependencies:
   - cameralink-gateway
   - epix
   - posix_ipc
+  - sysv_ipc
   - pyabel  # for tmo pop algorithm
   - git-lfs
   - git
