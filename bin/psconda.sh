@@ -1,12 +1,12 @@
 unset LD_LIBRARY_PATH
 unset PYTHONPATH
 
-v2=0
+v2=1
 for arg in "$@"
 do
-  if [ "$arg" == "-v2" ]
+  if [ "$arg" == "-v1" ]
   then
-    v2=1
+    v2=0
   fi
 done
 if [ $v2 -eq 1 ]
@@ -23,6 +23,9 @@ conda activate ps-4.4.10
 export OPENBLAS_NUM_THREADS=1
 # cpo: getting intermittent file-locking issue on ffb, so try this
 export HDF5_USE_FILE_LOCKING=FALSE
+# for libfabric. decreases performance a little, but allows forking
+export RDMAV_FORK_SAFE=1
+export RDMAV_HUGEPAGES_SAFE=1
 # Mikhail: root of psdm directories
 export DIR_PSDM=/cds/group/psdm
 

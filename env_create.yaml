@@ -1,11 +1,12 @@
 channels:
-  - tidair-tag # pcas for rogue
-  - tidair-packages # pcas for rogue
+  #tidair-tag # pcas for rogue
   - lcls-ii
+  - tidair-packages # pcas for rogue
   - conda-forge
   - defaults
+  - cogsci # pyqode
 dependencies:
-  - python=3.7
+  - python=3.9
   - setuptools 
   - cmake
   - make
@@ -24,14 +25,13 @@ dependencies:
   - h5py  # needed by small-h5 writer
   - krtc
   - roentdek
-  - htop < 3
+  - htop
   - asyncqt # ami
   - setproctitle # ami
-  - pyarrow # ami
   - networkfox # ami
   - pint # ami
   - pyfftw # ami
-  - pyqode.python # ami
+  - cogsci::pyqode.python # ami
   - pyzmq
   - zeromq
   - pyqt
@@ -63,7 +63,7 @@ dependencies:
   - prometheus_client
   - amityping
   - mypy
-  - rogue=v5.9.3
+  - rogue
   - bluesky
   - ophyd
   - lcls2_timetool
@@ -85,3 +85,6 @@ dependencies:
   - gdb
   - holoviews
   - panel
+  - aes-stream-drivers
+  - libpressio
+  - xarray
