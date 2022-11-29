@@ -35,7 +35,7 @@ dependencies:
   - pyzmq
   - zeromq
   - pyqt
-  - pyqtgraph
+  - pyqtgraph=0.12.4
   - epics-base
   - readline
   - dill
@@ -54,7 +54,7 @@ dependencies:
   - libfabric
   - libnl
   - rapidjson
-  - jedi=0.17.2
+  - jedi
   - transitions
   - ipython
   - requests
