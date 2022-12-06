@@ -88,3 +88,11 @@ dependencies:
   - aes-stream-drivers
   - libpressio
   - xarray
+  - ipympl
+  - ipywidgets
+  - pyepics
+  - rich
+  - seaborn
+  - dask
+  - dask-jobqueue
+  - distributed
