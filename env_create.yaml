@@ -92,6 +92,7 @@ dependencies:
   - ipywidgets
   - pyepics
   - rich
+  - jupyterlab
   - seaborn
   - dask
   - dask-jobqueue
