@@ -98,3 +98,4 @@ dependencies:
   - dask-jobqueue
   - distributed
   - notebook
+  - epix-uhr-dev
