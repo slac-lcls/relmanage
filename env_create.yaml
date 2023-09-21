@@ -99,3 +99,4 @@ dependencies:
   - distributed
   - notebook
   - epix-uhr-dev
+  - eigen
