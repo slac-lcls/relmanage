@@ -17,8 +17,8 @@ dependencies:
   - cython
   - matplotlib
   - pytest
-  - mongodb
-  - pymongo
+    #- mongodb
+    #- pymongo * 
   - curl
   - mypy_extensions
   - psmon
@@ -26,7 +26,7 @@ dependencies:
   - krtc
   - roentdek
   - htop
-  - asyncqt # ami
+  - asyncqt # ami 
   - setproctitle # ami
   - networkfox # ami
   - pint # ami
@@ -58,7 +58,7 @@ dependencies:
   - transitions
   - ipython
   - requests
-  - ipdb
+  #- ipdb *
   - prometheus-cpp
   - prometheus_client
   - amityping
@@ -70,7 +70,7 @@ dependencies:
   - cameralink-gateway
   - epix
   - posix_ipc
-  - sysv_ipc
+    #- sysv_ipc
   - pyabel  # for tmo pop algorithm
   - git-lfs
   - git
@@ -93,7 +93,7 @@ dependencies:
   - pyepics
   - rich
   - jupyterlab
-  - seaborn
+  # - seaborn
   - dask
   - dask-jobqueue
   - distributed
