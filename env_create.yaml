@@ -68,6 +68,7 @@ dependencies:
   - ophyd
   - lcls2_timetool
   - cameralink-gateway
+  - high-rate-encoder-dev
   - epix
   - posix_ipc
     #- sysv_ipc
@@ -101,3 +102,4 @@ dependencies:
   - epix-uhr-dev
   - eigen
   - kafka-python
+  - lark-parser
