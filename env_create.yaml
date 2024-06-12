@@ -103,3 +103,4 @@ dependencies:
   - eigen
   - kafka-python
   - lark-parser
+  - nlohmann_json 
