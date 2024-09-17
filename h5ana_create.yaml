@@ -28,4 +28,6 @@ dependencies:
   - ipympl
   - osqp
   - jupyterlab
+  - scipy
+  - xrayutilities
   
